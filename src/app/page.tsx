@@ -65,18 +65,18 @@ const services = [
 ];
 
 const insuranceProviders = [
-  { name: "Cigna", logo: "https://logo.clearbit.com/cigna.com?size=128" },
-  { name: "Aetna", logo: "https://logo.clearbit.com/aetna.com?size=128" },
-  { name: "Magellan Health", logo: "https://logo.clearbit.com/magellanhealth.com?size=128" },
-  { name: "Anthem BCBS", logo: "https://logo.clearbit.com/anthem.com?size=128" },
-  { name: "Wellcare", logo: "https://logo.clearbit.com/wellcare.com?size=128" },
-  { name: "AvMed", logo: "https://logo.clearbit.com/avmed.org?size=128" },
-  { name: "TRICARE", logo: "https://logo.clearbit.com/tricare.mil?size=128" },
-  { name: "Humana", logo: "https://logo.clearbit.com/humana.com?size=128" },
-  { name: "United Healthcare", logo: "https://logo.clearbit.com/uhc.com?size=128" },
-  { name: "ComPsych", logo: "https://logo.clearbit.com/compsych.com?size=128" },
-  { name: "Florida VPK", logo: "https://logo.clearbit.com/floridaearlylearning.com?size=128" },
-  { name: "Step Up for Students", logo: "https://logo.clearbit.com/stepupforstudents.org?size=128" },
+  { name: "Cigna", color: "#146DA1" },
+  { name: "Aetna", color: "#7D3F98" },
+  { name: "Magellan Health", color: "#00599C" },
+  { name: "Anthem BCBS", color: "#0072CE" },
+  { name: "Wellcare", color: "#00843D" },
+  { name: "AvMed", color: "#E31837" },
+  { name: "TRICARE", color: "#003B71" },
+  { name: "Humana", color: "#53B84A" },
+  { name: "United Healthcare", color: "#002677" },
+  { name: "ComPsych", color: "#005DAA" },
+  { name: "Florida VPK", color: "#F7941D" },
+  { name: "Step Up for Students", color: "#1B75BB" },
 ];
 
 const testimonials = [
@@ -357,15 +357,13 @@ export default function Home() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {insuranceProviders.map((provider) => (
-              <div key={provider.name} className="bg-white rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm border border-blue-light/20 card-hover min-h-[110px]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={provider.logo}
-                  alt={`${provider.name} logo`}
-                  className="h-10 w-auto object-contain"
-                  loading="lazy"
-                />
-                <span className="text-xs font-semibold text-gray text-center leading-tight">{provider.name}</span>
+              <div key={provider.name} className="bg-white rounded-2xl p-5 flex items-center justify-center shadow-sm border border-blue-light/20 card-hover min-h-[80px]">
+                <span
+                  className="text-sm font-bold text-center leading-tight"
+                  style={{ color: provider.color }}
+                >
+                  {provider.name}
+                </span>
               </div>
             ))}
           </div>
