@@ -121,27 +121,16 @@ export default function Home() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-warm-white via-blue-lightest to-cream">
-        {/* Decorative floating blocks */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[15%] left-[5%] w-20 h-20 bg-blue/8 rounded-2xl rotate-12 animate-float" />
-          <div className="absolute top-[25%] right-[8%] w-28 h-28 bg-orange/6 rounded-3xl -rotate-6 animate-float-slow" />
-          <div className="absolute bottom-[20%] left-[15%] w-14 h-14 bg-yellow/10 rounded-xl rotate-45 animate-float" />
-          <div className="absolute top-[60%] right-[20%] w-16 h-16 bg-blue-light/30 rounded-2xl rotate-[20deg] animate-float-slow" />
-          <div className="absolute bottom-[35%] right-[5%] w-10 h-10 bg-orange/8 rounded-lg -rotate-12 animate-float" />
-          <div className="absolute top-[10%] left-[45%] w-12 h-12 bg-blue/5 rounded-xl rotate-[30deg] animate-float-slow" />
-          <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-blue/3 rounded-[40px] rotate-12" />
-          <div className="absolute -top-10 -right-10 w-60 h-60 bg-orange/3 rounded-[30px] -rotate-12" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
+      <section className="relative overflow-hidden bg-gradient-to-br from-warm-white via-blue-lightest to-cream">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-24 lg:pt-36 lg:pb-32">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left content — 7 columns */}
+            <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 bg-blue/10 text-blue rounded-full px-4 py-2 text-sm font-semibold mb-6">
                 <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
                 Serving Miami-Dade &amp; Broward County
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-[1.1] mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-dark leading-[1.1] mb-6">
                 Your Child&apos;s{" "}
                 <span className="text-blue relative inline-block">
                   Potential
@@ -151,7 +140,7 @@ export default function Home() {
                 </span>{" "}
                 is Our Promise
               </h1>
-              <p className="text-lg sm:text-xl text-gray leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg sm:text-xl text-gray leading-relaxed mb-8 max-w-xl">
                 Compassionate, individualized ABA therapy that helps children with autism thrive —
                 in your home, on your schedule, with a team that treats your family like our own.
               </p>
@@ -189,35 +178,35 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero visual - stacked blocks */}
-            <div className="hidden lg:flex justify-center items-center relative">
-              <div className="relative w-[420px] h-[420px]">
-                <div className="absolute top-8 left-8 w-48 h-48 bg-blue rounded-3xl shadow-xl shadow-blue/20 animate-float flex items-center justify-center p-6">
+            {/* Right visual — 5 columns, grid-based blocks (not absolute) */}
+            <div className="hidden lg:block lg:col-span-5">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-blue rounded-3xl shadow-xl shadow-blue/20 p-8 flex items-center justify-center aspect-square animate-float">
                   <div className="text-white text-center">
-                    <div className="text-4xl font-bold font-display">10+</div>
-                    <div className="text-sm opacity-80 mt-1">Years of Experience</div>
+                    <div className="text-5xl font-bold font-display">10+</div>
+                    <div className="text-sm opacity-80 mt-2">Years of Experience</div>
                   </div>
                 </div>
-                <div className="absolute top-0 right-4 w-36 h-36 bg-orange rounded-2xl shadow-lg shadow-orange/20 animate-float-slow flex items-center justify-center p-4" style={{ animationDelay: "1s" }}>
+                <div className="bg-orange rounded-2xl shadow-lg shadow-orange/20 p-6 flex items-center justify-center aspect-square animate-float-slow mt-8" style={{ animationDelay: "1s" }}>
                   <div className="text-white text-center">
-                    <div className="text-3xl font-bold font-display">BCBA</div>
-                    <div className="text-xs opacity-80 mt-1">Led Programs</div>
+                    <div className="text-4xl font-bold font-display">BCBA</div>
+                    <div className="text-xs opacity-80 mt-2">Led Programs</div>
                   </div>
                 </div>
-                <div className="absolute bottom-12 left-0 w-40 h-40 bg-yellow rounded-2xl shadow-lg shadow-yellow/20 animate-float flex items-center justify-center p-4" style={{ animationDelay: "2s" }}>
+                <div className="bg-yellow rounded-2xl shadow-lg shadow-yellow/20 p-6 flex items-center justify-center aspect-square animate-float -mt-4" style={{ animationDelay: "2s" }}>
                   <div className="text-dark text-center">
                     <svg className="w-10 h-10 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                     </svg>
-                    <div className="text-xs font-bold">Family-Centered</div>
+                    <div className="text-sm font-bold">Family-Centered</div>
                   </div>
                 </div>
-                <div className="absolute bottom-4 right-12 w-44 h-44 bg-blue-light rounded-3xl shadow-lg animate-float-slow flex items-center justify-center p-4" style={{ animationDelay: "0.5s" }}>
+                <div className="bg-blue-light rounded-3xl shadow-lg p-6 flex items-center justify-center aspect-square animate-float-slow -mt-4" style={{ animationDelay: "0.5s" }}>
                   <div className="text-blue-dark text-center">
                     <svg className="w-10 h-10 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
                     </svg>
-                    <div className="text-xs font-bold">In-Home Therapy</div>
+                    <div className="text-sm font-bold">In-Home Therapy</div>
                   </div>
                 </div>
               </div>
@@ -226,8 +215,8 @@ export default function Home() {
         </div>
 
         {/* Wave divider */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 80" fill="none" className="w-full" preserveAspectRatio="none">
+        <div className="w-full">
+          <svg viewBox="0 0 1440 80" fill="none" className="w-full block" preserveAspectRatio="none">
             <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="#FEFCF8" />
           </svg>
         </div>
