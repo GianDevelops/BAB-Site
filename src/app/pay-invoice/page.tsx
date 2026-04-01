@@ -45,7 +45,7 @@ export default function PayInvoicePage() {
             <div className="p-8 md:p-12">
               <div className="aspect-[4/3] bg-blue-lightest/50 rounded-2xl flex items-center justify-center border-2 border-dashed border-blue-light/40 relative overflow-hidden">
                 <iframe
-                  src="https://buildablocktherapy.collectcheckout.com"
+                  src="https://collectcheckout.com/collect-checkout/fields?cartId=4a2b283a-9371-44e7-88db-c2115474e610"
                   title="Pay Invoice — Build-A-Block Therapy"
                   className="absolute inset-0 w-full h-full border-0 rounded-2xl"
                   allow="payment"
