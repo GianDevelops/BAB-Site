@@ -33,36 +33,133 @@
   --font-body: 'Nunito', sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ====== BASE ====== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--warm-white);
+    color: var(--dark);
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', cursive;
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--blue-lightest); }
+  ::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--blue); }
+
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(68, 97, 166, 0.15);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+/* ====== COMPONENTS ====== */
+@layer components {
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: #d9551a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(241, 102, 36, 0.3);
+  }
+
+  .btn-secondary {
+    background: var(--blue);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .btn-secondary:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(68, 97, 166, 0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--blue);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    border: 2px solid var(--blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .btn-outline:hover {
+    background: var(--blue);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(68, 97, 166, 0.12);
+  }
+
+  .wave-divider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  .wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+  }
+
+  .block-shape {
+    position: absolute;
+    border-radius: 12px;
+    opacity: 0.08;
+  }
 }
 
-body {
-  background: var(--warm-white);
-  color: var(--dark);
-  font-family: 'Nunito', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Baloo 2', cursive;
-}
-
-/* Building block decorative shapes */
-.block-shape {
-  position: absolute;
-  border-radius: 12px;
-  opacity: 0.08;
-}
-
-/* Soft floating animation */
+/* ====== KEYFRAMES & ANIMATIONS (outside layers) ====== */
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   33% { transform: translateY(-12px) rotate(2deg); }
@@ -84,16 +181,6 @@ h1, h2, h3, h4, h5, h6 {
   to { opacity: 1; }
 }
 
-@keyframes slide-in-left {
-  from { opacity: 0; transform: translateX(-40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slide-in-right {
-  from { opacity: 0; transform: translateX(40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
 @keyframes scale-in {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
@@ -104,142 +191,12 @@ h1, h2, h3, h4, h5, h6 {
   50% { transform: rotate(2deg); }
 }
 
-.animate-float { animation: float 6s ease-in-out infinite; }
-.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
-.animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
-.animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
-.animate-slide-left { animation: slide-in-left 0.8s ease-out forwards; }
-.animate-slide-right { animation: slide-in-right 0.8s ease-out forwards; }
-.animate-scale-in { animation: scale-in 0.6s ease-out forwards; }
-.animate-wiggle { animation: wiggle 3s ease-in-out infinite; }
-
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-.delay-600 { animation-delay: 0.6s; }
-.delay-700 { animation-delay: 0.7s; }
-.delay-800 { animation-delay: 0.8s; }
-
-/* Organic wave divider */
-.wave-divider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.wave-divider svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 60px;
-}
-
-/* Grain texture overlay */
-.grain-overlay::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Smooth scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--blue-lightest); }
-::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: var(--blue); }
-
-/* Card hover lift */
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(68, 97, 166, 0.12);
-}
-
-/* Button styles */
-.btn-primary {
-  background: var(--orange);
-  color: white;
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-.btn-primary:hover {
-  background: #d9551a;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(241, 102, 36, 0.3);
-}
-
-.btn-secondary {
-  background: var(--blue);
-  color: white;
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-.btn-secondary:hover {
-  background: var(--blue-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(68, 97, 166, 0.3);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--blue);
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  border: 2px solid var(--blue);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-.btn-outline:hover {
-  background: var(--blue);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Focus styles */
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(68, 97, 166, 0.15);
-}
-
-/* Insurance logo grid */
-.insurance-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
+/* ====== UTILITIES ====== */
+@layer utilities {
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+  .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
+  .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+  .animate-scale-in { animation: scale-in 0.6s ease-out forwards; }
+  .animate-wiggle { animation: wiggle 3s ease-in-out infinite; }
 }
