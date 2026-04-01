@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /pay-invoice/
+
+Sitemap: https://buildablocktherapy.com/sitemap.xml
