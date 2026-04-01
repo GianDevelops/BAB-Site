@@ -88,9 +88,11 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Kristel */}
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-blue-light/20 card-hover">
-              <div className="w-20 h-20 bg-blue rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-3xl font-bold font-display">KA</span>
-              </div>
+              <img
+                src="/images/kristel-arauz.jpg"
+                alt="Kristel Arauz, MS, BCBA — Co-Founder of Build-A-Block Children Therapy Solutions"
+                className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
+              />
               <h3 className="text-2xl font-bold text-dark mb-1">Kristel Arauz, MS, BCBA</h3>
               <p className="text-blue font-semibold mb-4">Co-Founder &amp; Clinical Director</p>
               <p className="text-gray leading-relaxed mb-4">
@@ -113,9 +115,11 @@ export default function AboutPage() {
 
             {/* Ana */}
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-blue-light/20 card-hover">
-              <div className="w-20 h-20 bg-orange rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-white text-3xl font-bold font-display">AJ</span>
-              </div>
+              <img
+                src="/images/ana-jacome.jpg"
+                alt="Ana Jacome, RBT — Co-Founder of Build-A-Block Children Therapy Solutions"
+                className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
+              />
               <h3 className="text-2xl font-bold text-dark mb-1">Ana Jacome, RBT</h3>
               <p className="text-orange font-semibold mb-4">Co-Founder &amp; Operations Director</p>
               <p className="text-gray leading-relaxed mb-4">
