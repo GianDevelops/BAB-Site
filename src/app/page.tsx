@@ -248,13 +248,13 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: "🧩", title: "100% Individualized", desc: "No cookie-cutter programs here. Every treatment plan is designed specifically for your child's unique strengths and needs." },
-              { icon: "🏠", title: "In Your Home", desc: "We come to you. Your child learns in the environment where they feel most comfortable — their own home." },
-              { icon: "🌎", title: "Bilingual Team", desc: "Fluent in English and Spanish. We ensure nothing is lost in translation when it comes to your child's care." },
-              { icon: "💛", title: "Family First", desc: "We don't just work with your child — we empower your entire family with the tools to support their growth." },
+              { color: "bg-blue", title: "100% Individualized", desc: "No cookie-cutter programs here. Every treatment plan is designed specifically for your child's unique strengths and needs." },
+              { color: "bg-orange", title: "In Your Home", desc: "We come to you. Your child learns in the environment where they feel most comfortable — their own home." },
+              { color: "bg-yellow", title: "Bilingual Team", desc: "Fluent in English and Spanish. We ensure nothing is lost in translation when it comes to your child's care." },
+              { color: "bg-blue-light", title: "Family First", desc: "We don't just work with your child — we empower your entire family with the tools to support their growth." },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-blue-light/20">
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className={`w-12 h-12 ${item.color} rounded-xl mb-5 shadow-sm`} />
                 <h3 className="text-xl font-bold text-dark mb-3">{item.title}</h3>
                 <p className="text-gray text-sm leading-relaxed">{item.desc}</p>
               </div>
