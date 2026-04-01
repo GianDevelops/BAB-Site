@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const services = [
   {
     id: "in-home",
+    img: "/images/stock/service-inhome.jpg",
     title: "In-Home ABA Therapy",
     tagline: "Where comfort meets clinical excellence",
     description:
@@ -32,6 +33,7 @@ const services = [
   },
   {
     id: "social-skills",
+    img: "/images/stock/service-social.jpg",
     title: "Social Skills Groups",
     tagline: "Building friendships, one step at a time",
     description:
@@ -52,6 +54,7 @@ const services = [
   },
   {
     id: "parent-training",
+    img: "/images/stock/service-parent.jpg",
     title: "Parent Training",
     tagline: "Empowering you to be your child's greatest advocate",
     description:
@@ -72,6 +75,7 @@ const services = [
   },
   {
     id: "school-consultation",
+    img: "/images/stock/service-school.jpg",
     title: "School Consultation",
     tagline: "Bridging therapy and education",
     description:
@@ -92,6 +96,7 @@ const services = [
   },
   {
     id: "tutoring",
+    img: "/images/stock/service-tutoring.jpg",
     title: "ABA-Based Tutoring",
     tagline: "Learning that builds confidence",
     description:
@@ -112,6 +117,7 @@ const services = [
   },
   {
     id: "telehealth",
+    img: "/images/stock/service-telehealth.jpg",
     title: "Telehealth Services",
     tagline: "Expert care, wherever you are",
     description:
@@ -196,20 +202,16 @@ export default function ServicesPage() {
                 </Link>
               </div>
 
-              {/* Visual block */}
+              {/* Service image */}
               <div className={`${i % 2 === 1 ? "lg:order-1" : ""} flex justify-center`}>
-                <div className={`w-full max-w-md aspect-square bg-gradient-to-br ${
-                  service.color === "blue" ? "from-blue/10 to-blue-light/30" :
-                  service.color === "orange" ? "from-orange/10 to-orange-light/20" :
-                  "from-yellow/10 to-yellow-light/30"
-                } rounded-3xl flex items-center justify-center p-12 relative overflow-hidden`}>
-                  <div className="absolute top-4 right-4 w-16 h-16 bg-white/30 rounded-xl rotate-12" />
-                  <div className="absolute bottom-6 left-6 w-12 h-12 bg-white/20 rounded-lg -rotate-6" />
-                  <div className={`text-${service.color} opacity-20`}>
-                    <svg className="w-48 h-48" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.5}>
-                      {service.icon.props.children}
-                    </svg>
-                  </div>
+                <div className="w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-lg">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
