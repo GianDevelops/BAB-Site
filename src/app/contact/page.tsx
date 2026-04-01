@@ -271,7 +271,7 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-orange/10 rounded-3xl p-8 border border-orange/20">
-                <h3 className="text-lg font-bold text-dark mb-3">Referring a Patient?</h3>
+                <h3 className="text-lg font-bold text-dark mb-3">Referring a Child?</h3>
                 <p className="text-gray text-sm leading-relaxed mb-4">
                   We welcome referrals from physicians, neurologists, psychologists, and other healthcare providers.
                   Contact us directly for streamlined intake.
