@@ -6,7 +6,7 @@ const services = [
     id: "in-home",
     img: "/images/services/in-home.jpg",
     title: "In-Home ABA Therapy",
-    description: "One-on-one therapy in the comfort of your home. We meet your child where they feel safest — creating a natural learning environment that produces lasting results.",
+    description: "One-on-one therapy in the comfort of your home. We meet your child where they feel safest, creating a natural learning environment that produces lasting results.",
   },
   {
     id: "social-skills",
@@ -24,7 +24,7 @@ const services = [
     id: "school-consultation",
     img: "/images/services/school-consultation.jpg",
     title: "School Consultation",
-    description: "We collaborate with teachers and schools to ensure your child thrives in the classroom — from IEP support to behavior plans and staff training.",
+    description: "We collaborate with teachers and schools to ensure your child thrives in the classroom, from IEP support to behavior plans and staff training.",
   },
   {
     id: "tutoring",
@@ -36,7 +36,7 @@ const services = [
     id: "telehealth",
     img: "/images/services/telehealth.jpg",
     title: "Telehealth Services",
-    description: "Quality ABA therapy from anywhere. Our virtual sessions bring the same expert care to your screen — perfect for parent training and ongoing support.",
+    description: "Quality ABA therapy from anywhere. Our virtual sessions bring the same expert care to your screen, perfect for parent training and ongoing support.",
   },
 ];
 
@@ -224,7 +224,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: "100% Individualized", desc: "No cookie-cutter programs here. Every treatment plan is designed specifically for your child's unique strengths and needs." },
-              { title: "In Your Home", desc: "We come to you. Your child learns in the environment where they feel most comfortable — their own home." },
+              { title: "In Your Home", desc: "We come to you. Your child learns in the environment where they feel most comfortable, their own home." },
               { title: "Bilingual Team", desc: "Fluent in English and Spanish. We ensure nothing is lost in translation when it comes to your child's care." },
               { title: "Family First", desc: "We don't just work with your child — we empower your entire family with the tools to support their growth." },
             ].map((item, i) => (
@@ -360,7 +360,7 @@ export default function Home() {
           </p>
 
           <p className="text-center text-gray text-sm mt-8">
-            Don&apos;t see your insurance? <Link href="/contact" className="text-blue font-semibold hover:text-orange transition-colors">Contact us</Link> — we may still be able to help.
+            Don&apos;t see your insurance? <Link href="/contact" className="text-blue font-semibold hover:text-orange transition-colors">Contact us</Link>, we may still be able to help.
           </p>
         </div>
       </section>

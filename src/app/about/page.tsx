@@ -5,7 +5,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "About Us — Meet the Team Behind Build-A-Block Therapy",
   description:
-    "Meet the compassionate team at Build-A-Block Children Therapy Solutions. Co-founded by Kristel Arauz, BCBA, and Ana Jacome, RBT — bringing 17+ combined years of ABA experience to families in Miami.",
+    "Meet the compassionate team at Build-A-Block Children Therapy Solutions. Co-founded by Kristel Arauz, BCBA, and Ana Jacome, BS, bringing 17+ combined years of ABA experience to families in Miami.",
   alternates: { canonical: "https://buildablocktherapy.com/about" },
 };
 
@@ -103,7 +103,7 @@ export default function AboutPage() {
               </p>
               <p className="text-gray leading-relaxed mb-4">
                 Before founding Build-A-Block, Kristel worked at the renowned New England Center for Children (NECC)
-                and spent time in Abu Dhabi training educators in ABA principles — bringing an international perspective
+                and spent time in Abu Dhabi training educators in ABA principles, bringing an international perspective
                 to her practice.
               </p>
               <div className="flex flex-wrap gap-2">

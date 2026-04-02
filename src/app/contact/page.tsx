@@ -50,7 +50,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-gray text-lg max-w-2xl mx-auto leading-relaxed">
             We&apos;re here to answer your questions and help you get started. Fill out the form below
-            or reach out directly — there&apos;s no obligation, just a conversation about how we can help.
+            or reach out directly, there&apos;s no obligation, just a conversation about how we can help.
           </p>
         </div>
       </section>
@@ -192,7 +192,7 @@ export default function ContactPage() {
                         name="message"
                         rows={4}
                         className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 transition-all resize-none"
-                        placeholder="Share anything you'd like us to know — diagnosis, current challenges, goals, or questions you have..."
+                        placeholder="Share anything you'd like us to know, diagnosis, current challenges, goals, or questions you have..."
                       />
                     </div>
 
