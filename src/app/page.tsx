@@ -93,7 +93,7 @@ const testimonials = [
     stars: 5,
   },
   {
-    quote: "As a bilingual family, finding a provider who understands our culture was essential. BAB's approach is warm, professional, and so individualized. I recommend them to every parent I know.",
+    quote: "Como familia bilingüe, encontrar un proveedor que entienda nuestra cultura era esencial. El enfoque de BAB es cálido, profesional y muy individualizado. Los recomiendo a todos los padres que conozco.",
     name: "Carmen L.",
     role: "Parent of a 4-year-old",
     stars: 5,
