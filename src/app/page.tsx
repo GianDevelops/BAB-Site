@@ -3,31 +3,37 @@ import CTABanner from "@/components/CTABanner";
 
 const services = [
   {
+    id: "in-home",
     img: "/images/services/in-home.jpg",
     title: "In-Home ABA Therapy",
     description: "One-on-one therapy in the comfort of your home. We meet your child where they feel safest — creating a natural learning environment that produces lasting results.",
   },
   {
+    id: "social-skills",
     img: "/images/services/social-skills.jpg",
     title: "Social Skills Groups",
     description: "Fun, structured group sessions where children practice communication, friendship-building, and emotional regulation with peers in a supportive setting.",
   },
   {
+    id: "parent-training",
     img: "/images/services/parent-training.jpg",
     title: "Parent Training",
     description: "We empower you with proven ABA strategies so you can reinforce your child's progress at home. Because you are your child's greatest advocate.",
   },
   {
+    id: "school-consultation",
     img: "/images/services/school-consultation.jpg",
     title: "School Consultation",
     description: "We collaborate with teachers and schools to ensure your child thrives in the classroom — from IEP support to behavior plans and staff training.",
   },
   {
+    id: "tutoring",
     img: "/images/services/tutoring.jpg",
     title: "Tutoring",
     description: "ABA-based academic support that builds confidence and knowledge. Our one-on-one sessions use positive reinforcement to help your child succeed in school.",
   },
   {
+    id: "telehealth",
     img: "/images/services/telehealth.jpg",
     title: "Telehealth Services",
     description: "Quality ABA therapy from anywhere. Our virtual sessions bring the same expert care to your screen — perfect for parent training and ongoing support.",
@@ -260,7 +266,7 @@ export default function Home() {
                 <div className="p-7">
                   <h3 className="text-xl font-bold text-dark mb-3">{service.title}</h3>
                   <p className="text-gray text-sm leading-relaxed mb-5">{service.description}</p>
-                  <Link href="/services" className="text-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                  <Link href={`/services#${service.id}`} className="text-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
                     Learn More
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
