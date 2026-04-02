@@ -42,7 +42,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray leading-relaxed mb-6">
                 At Build-A-Block, we don&apos;t believe in one-size-fits-all solutions. Every child who walks through
-                our program receives a treatment plan crafted specifically for them — built around their strengths,
+                our program receives a treatment plan crafted specifically for them, built around their strengths,
                 their challenges, and the goals your family cares about most.
               </p>
               <p className="text-gray leading-relaxed mb-6">
