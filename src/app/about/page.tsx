@@ -153,7 +153,6 @@ export default function AboutPage() {
             {[
               "Kendall", "South Miami", "Coral Gables", "Doral", "Homestead",
               "Miami Beach", "Hialeah", "Miami Lakes", "Cutler Bay", "Pinecrest",
-              "Pembroke Pines", "Miramar", "Hollywood", "Fort Lauderdale", "Aventura",
             ].map((area) => (
               <span key={area} className="bg-white px-5 py-3 rounded-full text-sm font-semibold text-dark shadow-sm border border-blue-light/20">
                 {area}

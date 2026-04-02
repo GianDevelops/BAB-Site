@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "What areas in Miami do you serve?",
-    a: "We provide in-home ABA therapy throughout Miami-Dade County and Broward County, including Kendall, South Miami, Coral Gables, Doral, Homestead, Miami Beach, Hialeah, Pembroke Pines, Fort Lauderdale, and surrounding communities. We also offer telehealth services statewide.",
+    a: "We provide in-home ABA therapy throughout Miami-Dade County and Broward County, including Kendall, South Miami, Coral Gables, Doral, Homestead, Miami Beach, Hialeah, and surrounding communities. We also offer telehealth services statewide.",
   },
   {
     q: "What makes Build-A-Block different from other ABA providers?",
