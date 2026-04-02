@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
-  { href: "/pay-invoice", label: "Pay Invoice" },
 ];
 
 export default function Navbar() {
