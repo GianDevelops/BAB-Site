@@ -106,13 +106,13 @@ export default function Home() {
     <>
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-br from-warm-white via-blue-lightest to-cream">
-        {/* Faint hero background image, left-aligned */}
-        <div className="absolute top-0 bottom-0 left-0 w-[50%] overflow-hidden pointer-events-none" aria-hidden="true">
+        {/* Faint hero background image */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/hero-transparent.png"
             alt=""
-            className="w-full h-full object-contain object-left-bottom opacity-[0.1]"
+            className="w-full h-full object-cover opacity-[0.1]"
           />
         </div>
 
