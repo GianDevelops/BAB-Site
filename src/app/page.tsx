@@ -136,7 +136,7 @@ export default function Home() {
         <div className="absolute top-0 bottom-0 left-0 w-[55%] overflow-hidden pointer-events-none" aria-hidden="true">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/hero-bg.jpg"
+            src="/images/hero-bg.png"
             alt=""
             className="w-full h-full object-cover object-top opacity-[0.12]"
           />
