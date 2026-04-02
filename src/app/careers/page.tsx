@@ -55,7 +55,7 @@ const perks = [
   { icon: "👨‍👩‍👧‍👦", title: "Family Culture", desc: "We're not just coworkers — we're a supportive family that celebrates each other's wins." },
   { icon: "📈", title: "Career Growth", desc: "Clear pathways for advancement, mentorship from experienced BCBAs, and tuition support." },
   { icon: "🗓️", title: "Flexible Schedule", desc: "Work-life balance matters. We offer flexible hours that work with your lifestyle." },
-  { icon: "💰", title: "Competitive Pay", desc: "Compensation that reflects your expertise, with regular performance-based increases." },
+  { icon: "💰", title: "Competitive Pay & Benefits", desc: "Compensation that reflects your expertise, with regular performance-based increases." },
   { icon: "🌟", title: "Meaningful Work", desc: "Every day, you'll see the direct impact of your work on a child's life. That's priceless." },
 ];
 
