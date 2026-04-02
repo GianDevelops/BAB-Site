@@ -219,20 +219,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { img: "/images/stock/individualized.jpg", title: "100% Individualized", desc: "No cookie-cutter programs here. Every treatment plan is designed specifically for your child's unique strengths and needs." },
-              { img: "/images/stock/home.jpg", title: "In Your Home", desc: "We come to you. Your child learns in the environment where they feel most comfortable — their own home." },
-              { img: "/images/stock/bilingual.jpg", title: "Bilingual Team", desc: "Fluent in English and Spanish. We ensure nothing is lost in translation when it comes to your child's care." },
-              { img: "/images/stock/family.jpg", title: "Family First", desc: "We don't just work with your child — we empower your entire family with the tools to support their growth." },
+              { title: "100% Individualized", desc: "No cookie-cutter programs here. Every treatment plan is designed specifically for your child's unique strengths and needs." },
+              { title: "In Your Home", desc: "We come to you. Your child learns in the environment where they feel most comfortable — their own home." },
+              { title: "Bilingual Team", desc: "Fluent in English and Spanish. We ensure nothing is lost in translation when it comes to your child's care." },
+              { title: "Family First", desc: "We don't just work with your child — we empower your entire family with the tools to support their growth." },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-blue-light/20 overflow-hidden">
-                <div className="h-48 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <div className="p-7">
-                  <h3 className="text-xl font-bold text-dark mb-3">{item.title}</h3>
-                  <p className="text-gray text-sm leading-relaxed">{item.desc}</p>
-                </div>
+              <div key={i} className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-blue-light/20">
+                <h3 className="text-xl font-bold text-dark mb-3">{item.title}</h3>
+                <p className="text-gray text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
