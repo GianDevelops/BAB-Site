@@ -113,7 +113,7 @@ export default function Home() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 bg-blue/10 text-blue rounded-full px-4 py-2 text-sm font-semibold mb-6">
                 <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
-                Serving Miami-Dade &amp; Broward County
+                Serving Miami-Dade County
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-dark leading-[1.1] mb-6">
                 Your Child&apos;s{" "}
