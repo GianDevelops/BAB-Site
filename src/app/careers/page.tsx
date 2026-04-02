@@ -35,19 +35,6 @@ const positions = [
       "Patience, creativity, and genuine love for working with kids",
     ],
   },
-  {
-    title: "Behavior Analyst (BA)",
-    type: "Full-Time",
-    description:
-      "Support our clinical team in delivering high-quality ABA services. Assist with assessments, data collection, parent training, and program implementation across multiple settings.",
-    requirements: [
-      "Bachelor's or Master's degree in ABA, Psychology, or related field",
-      "Pursuing BCBA certification preferred",
-      "Experience implementing behavior intervention plans",
-      "Strong organizational and documentation skills",
-      "Team-oriented with excellent interpersonal skills",
-    ],
-  },
 ];
 
 const perks = [
