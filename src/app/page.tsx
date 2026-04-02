@@ -132,7 +132,17 @@ export default function Home() {
     <>
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-br from-warm-white via-blue-lightest to-cream">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-24 lg:pt-36 lg:pb-32">
+        {/* Faint hero background image on the left */}
+        <div className="absolute inset-y-0 left-0 w-1/2 pointer-events-none" aria-hidden="true">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/hero-bg.jpg"
+            alt=""
+            className="w-full h-full object-cover opacity-[0.07]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-blue-lightest/80" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-24 lg:pt-36 lg:pb-32">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left content — 7 columns */}
             <div className="lg:col-span-7">
