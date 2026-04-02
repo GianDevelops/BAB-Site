@@ -94,7 +94,7 @@ export default function AboutPage() {
                 className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
               />
               <h3 className="text-2xl font-bold text-dark mb-1">Kristel Arauz, MS, BCBA</h3>
-              <p className="text-blue font-semibold mb-4">Co-Founder &amp; Clinical Director</p>
+              <p className="text-blue font-semibold mb-4">Co-Founder</p>
               <p className="text-gray leading-relaxed mb-4">
                 With over 10 years of experience working with children and adults with developmental disabilities,
                 Kristel brings a depth of clinical knowledge matched only by her warmth. She holds a Master&apos;s degree
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
               />
               <h3 className="text-2xl font-bold text-dark mb-1">Ana Jacome, BS</h3>
-              <p className="text-orange font-semibold mb-4">Co-Founder &amp; Operations Director</p>
+              <p className="text-orange font-semibold mb-4">Co-Founder</p>
               <p className="text-gray leading-relaxed mb-4">
                 Ana brings over 10 years of hands-on experience working with children and teens on the autism spectrum.
                 She holds a Bachelor&apos;s degree in Biology from Florida International University and has spent her
