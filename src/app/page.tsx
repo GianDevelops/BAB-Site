@@ -376,6 +376,13 @@ export default function Home() {
             ))}
           </div>
 
+          {/* Crawlable text for SEO — visually hidden but readable by search engines */}
+          <p className="sr-only">
+            Build-A-Block Children Therapy Solutions accepts the following insurance providers for ABA therapy in Miami:
+            Cigna, Aetna, Magellan Health, Anthem Blue Cross Blue Shield, Wellcare, AvMed, TRICARE, Humana,
+            United Healthcare, ComPsych, Florida VPK, and Step Up for Students.
+          </p>
+
           <p className="text-center text-gray text-sm mt-8">
             Don&apos;t see your insurance? <Link href="/contact" className="text-blue font-semibold hover:text-orange transition-colors">Contact us</Link> — we may still be able to help.
           </p>
