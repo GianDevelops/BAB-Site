@@ -51,12 +51,83 @@ const positions = [
 ];
 
 const perks = [
-  { icon: "📚", title: "Monthly Training", desc: "Ongoing CEU opportunities and professional development to keep your skills sharp." },
-  { icon: "👨‍👩‍👧‍👦", title: "Family Culture", desc: "We're not just coworkers — we're a supportive family that celebrates each other's wins." },
-  { icon: "📈", title: "Career Growth", desc: "Clear pathways for advancement, mentorship from experienced BCBAs, and tuition support." },
-  { icon: "🗓️", title: "Flexible Schedule", desc: "Work-life balance matters. We offer flexible hours that work with your lifestyle." },
-  { icon: "💰", title: "Competitive Pay & Benefits", desc: "Compensation that reflects your expertise, with regular performance-based increases." },
-  { icon: "🌟", title: "Meaningful Work", desc: "Every day, you'll see the direct impact of your work on a child's life. That's priceless." },
+  {
+    title: "Monthly Training",
+    desc: "Ongoing CEU opportunities and professional development to keep your skills sharp.",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 27V7a2 2 0 012-2h14a2 2 0 012 2v20" />
+        <path d="M5 27h18" />
+        <path d="M9 11h8M9 15h6M9 19h4" />
+        <path d="M25 10c1.5 0 3 1 3 3v11c0 2-1.5 3-3 3H5" />
+      </svg>
+    ),
+    bg: "bg-blue/10", color: "text-blue",
+  },
+  {
+    title: "Family Culture",
+    desc: "We're not just coworkers — we're a supportive family that celebrates each other's wins.",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="16" cy="8" r="3.5" />
+        <circle cx="7" cy="12" r="2.5" />
+        <circle cx="25" cy="12" r="2.5" />
+        <path d="M10 28v-6a6 6 0 0112 0v6" />
+        <path d="M4 28v-4a3.5 3.5 0 015-3" />
+        <path d="M28 28v-4a3.5 3.5 0 00-5-3" />
+      </svg>
+    ),
+    bg: "bg-orange/10", color: "text-orange",
+  },
+  {
+    title: "Career Growth",
+    desc: "Clear pathways for advancement, mentorship from experienced BCBAs, and tuition support.",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 26l7-7 5 4 8-10 4-4" />
+        <path d="M22 9h6v6" />
+      </svg>
+    ),
+    bg: "bg-yellow/15", color: "text-dark",
+  },
+  {
+    title: "Flexible Schedule",
+    desc: "Work-life balance matters. We offer flexible hours that work with your lifestyle.",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="6" width="24" height="22" rx="3" />
+        <path d="M4 13h24" />
+        <path d="M10 3v5M22 3v5" />
+        <circle cx="16" cy="20" r="1.5" fill="currentColor" />
+        <circle cx="10" cy="20" r="1.5" fill="currentColor" />
+        <circle cx="22" cy="20" r="1.5" fill="currentColor" />
+      </svg>
+    ),
+    bg: "bg-blue-light/30", color: "text-blue-dark",
+  },
+  {
+    title: "Competitive Pay & Benefits",
+    desc: "Compensation that reflects your expertise, with regular performance-based increases.",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="16" cy="16" r="12" />
+        <path d="M19 12c-.5-1.5-2-2-3.5-2-2 0-3.5 1.2-3.5 3s1.5 2.5 3.5 3c2 .5 3.5 1.5 3.5 3s-1.5 3-3.5 3c-1.5 0-3-.5-3.5-2" />
+        <path d="M16 8v2M16 22v2" />
+      </svg>
+    ),
+    bg: "bg-orange/10", color: "text-orange",
+  },
+  {
+    title: "Meaningful Work",
+    desc: "Every day, you'll see the direct impact of your work on a child's life. That's priceless.",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 28s-11-6.5-11-14.5C5 8.5 8 5 12 5c2.2 0 3.7 1.2 4 1.5C16.3 6.2 17.8 5 20 5c4 0 7 3.5 7 8.5C27 21.5 16 28 16 28z" />
+        <path d="M12 15l3 3 5-6" />
+      </svg>
+    ),
+    bg: "bg-blue/10", color: "text-blue",
+  },
 ];
 
 export default function CareersPage() {
@@ -93,7 +164,9 @@ export default function CareersPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {perks.map((perk, i) => (
               <div key={i} className="bg-white rounded-3xl p-7 shadow-sm border border-blue-light/20 card-hover">
-                <div className="text-3xl mb-3">{perk.icon}</div>
+                <div className={`w-14 h-14 ${perk.bg} rounded-full flex items-center justify-center mb-4 ${perk.color}`}>
+                  {perk.icon}
+                </div>
                 <h3 className="text-lg font-bold text-dark mb-2">{perk.title}</h3>
                 <p className="text-gray text-sm leading-relaxed">{perk.desc}</p>
               </div>
