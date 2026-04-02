@@ -68,7 +68,7 @@ const perks = [
   },
   {
     title: "Career Growth",
-    desc: "Clear pathways for advancement, mentorship from experienced BCBAs, and tuition support.",
+    desc: "Clear pathways for advancement, mentorship from experienced BCBAs, and monthly training.",
     icon: (
       <svg className="w-7 h-7" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 26l7-7 5 4 8-10 4-4" />
