@@ -39,12 +39,10 @@ const insuranceProviders = [
   { name: "Aetna", logo: "/images/insurance/aetna.png" },
   { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
   { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
-  { name: "Wellcare", logo: "/images/insurance/wellcare.png" },
   { name: "AvMed", logo: "/images/insurance/avmed.png" },
   { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
   { name: "Humana", logo: "/images/insurance/humana.png" },
   { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
-  { name: "ComPsych", logo: "/images/insurance/compsych.png" },
   { name: "Florida VPK", logo: "/images/insurance/vpk.png" },
   { name: "Step Up for Students", logo: "/images/insurance/stepup.svg" },
 ];
@@ -81,7 +79,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover ABA therapy in Florida?",
-    a: "Yes! Florida law mandates that most insurance plans cover ABA therapy for children diagnosed with autism. We accept Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, TRICARE, Wellcare, AvMed, Magellan Health, ComPsych, Florida VPK, and Step Up for Students. Our team handles insurance verification to make the process easy for you.",
+    a: "Yes! Florida law mandates that most insurance plans cover ABA therapy for children diagnosed with autism. We accept Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, TRICARE, AvMed, Magellan Health, Florida VPK, and Step Up for Students. Our team handles insurance verification to make the process easy for you.",
   },
   {
     q: "What areas in Miami do you serve?",
@@ -351,8 +349,8 @@ export default function Home() {
           {/* Crawlable text for SEO — visually hidden but readable by search engines */}
           <p className="sr-only">
             Build-A-Block Children Therapy Solutions accepts the following insurance providers for ABA therapy in Miami:
-            Cigna, Aetna, Magellan Health, Anthem Blue Cross Blue Shield, Wellcare, AvMed, TRICARE, Humana,
-            United Healthcare, ComPsych, Florida VPK, and Step Up for Students.
+            Cigna, Aetna, Magellan Health, Anthem Blue Cross Blue Shield, AvMed, TRICARE, Humana,
+            United Healthcare, Florida VPK, and Step Up for Students.
           </p>
 
           <p className="text-center text-gray text-sm mt-8">
