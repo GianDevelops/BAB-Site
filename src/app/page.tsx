@@ -164,8 +164,8 @@ export default function Home() {
             </div>
 
             {/* Right visual — 5 columns, grid-based blocks (not absolute) */}
-            <div className="hidden lg:block lg:col-span-5">
-              <div className="grid grid-cols-2 gap-4">
+            <div className="lg:col-span-5">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-xs sm:max-w-sm mx-auto lg:max-w-none">
                 <div className="bg-blue rounded-3xl shadow-xl shadow-blue/20 p-8 flex items-center justify-center aspect-square animate-float">
                   <div className="text-white text-center">
                     <div className="text-5xl font-bold font-display">10+</div>
