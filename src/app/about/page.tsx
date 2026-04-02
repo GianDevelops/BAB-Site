@@ -117,23 +117,23 @@ export default function AboutPage() {
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-blue-light/20 card-hover">
               <img
                 src="/images/ana-jacome.jpg"
-                alt="Ana Jacome, RBT — Co-Founder of Build-A-Block Children Therapy Solutions"
+                alt="Ana Jacome, BS — Co-Founder of Build-A-Block Children Therapy Solutions"
                 className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
               />
-              <h3 className="text-2xl font-bold text-dark mb-1">Ana Jacome, RBT</h3>
+              <h3 className="text-2xl font-bold text-dark mb-1">Ana Jacome, BS</h3>
               <p className="text-orange font-semibold mb-4">Co-Founder &amp; Operations Director</p>
               <p className="text-gray leading-relaxed mb-4">
-                Ana brings over 7 years of hands-on experience working with children and teens on the autism spectrum.
-                She holds a Bachelor&apos;s degree in Biology from Florida International University and is currently
-                pursuing her Master&apos;s in Neuropsychology with an emphasis in Applied Behavior Analysis.
+                Ana brings over 10 years of hands-on experience working with children and teens on the autism spectrum.
+                She holds a Bachelor&apos;s degree in Biology from Florida International University and has spent her
+                career deepening her expertise in Applied Behavior Analysis across center-based, in-home, community,
+                and school settings.
               </p>
               <p className="text-gray leading-relaxed mb-4">
-                Her expertise spans center-based, in-home, community, and school settings. Ana excels at staff and
-                parent training, behavior plan implementation, and ensuring every family receives the personalized
-                attention they deserve.
+                As co-founder, Ana oversees daily operations, staff development, and quality assurance, ensuring every
+                family receives the personalized attention and exceptional care they deserve.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Registered Behavior Technician", "7+ Years Experience", "Neuropsychology", "Parent Training", "Multi-Setting Expert"].map((tag) => (
+                {["Bachelor of Science", "10+ Years Experience", "Operations & Quality Assurance", "Staff Development", "Multi-Setting Expert"].map((tag) => (
                   <span key={tag} className="bg-orange/10 text-orange text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
                 ))}
               </div>
