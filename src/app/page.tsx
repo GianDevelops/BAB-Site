@@ -65,18 +65,18 @@ const services = [
 ];
 
 const insuranceProviders = [
-  { name: "Cigna", color: "#146DA1" },
-  { name: "Aetna", color: "#7D3F98" },
-  { name: "Magellan Health", color: "#00599C" },
-  { name: "Anthem BCBS", color: "#0072CE" },
-  { name: "Wellcare", color: "#00843D" },
-  { name: "AvMed", color: "#E31837" },
-  { name: "TRICARE", color: "#003B71" },
-  { name: "Humana", color: "#53B84A" },
-  { name: "United Healthcare", color: "#002677" },
-  { name: "ComPsych", color: "#005DAA" },
-  { name: "Florida VPK", color: "#F7941D" },
-  { name: "Step Up for Students", color: "#1B75BB" },
+  { name: "Cigna", logo: "/images/insurance/cigna.png" },
+  { name: "Aetna", logo: "/images/insurance/aetna.png" },
+  { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
+  { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
+  { name: "Wellcare", logo: "/images/insurance/wellcare.png" },
+  { name: "AvMed", logo: "/images/insurance/avmed.png" },
+  { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
+  { name: "Humana", logo: "/images/insurance/humana.png" },
+  { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
+  { name: "ComPsych", logo: "/images/insurance/compsych.png" },
+  { name: "Florida VPK", logo: "/images/insurance/vpk.png" },
+  { name: "Step Up for Students", logo: "/images/insurance/stepup.svg" },
 ];
 
 const testimonials = [
@@ -363,13 +363,15 @@ export default function Home() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {insuranceProviders.map((provider) => (
-              <div key={provider.name} className="bg-white rounded-2xl p-5 flex items-center justify-center shadow-sm border border-blue-light/20 card-hover min-h-[80px]">
-                <span
-                  className="text-sm font-bold text-center leading-tight"
-                  style={{ color: provider.color }}
-                >
-                  {provider.name}
-                </span>
+              <div key={provider.name} className="bg-white rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-sm border border-blue-light/20 card-hover min-h-[100px]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={provider.logo}
+                  alt={`${provider.name} logo`}
+                  className="h-8 w-auto object-contain max-w-[120px]"
+                  loading="lazy"
+                />
+                <span className="text-[11px] font-semibold text-gray text-center leading-tight">{provider.name}</span>
               </div>
             ))}
           </div>
