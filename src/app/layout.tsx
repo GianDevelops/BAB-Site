@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import LeadPopup from "@/components/LeadPopup";
+import LayoutShell from "@/components/LayoutShell";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://buildablocktherapy.com"),
@@ -172,10 +170,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <LeadPopup />
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );
