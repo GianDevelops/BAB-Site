@@ -1,20 +1,58 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const insuranceOptions = [
   "Cigna", "Aetna", "Magellan Health", "Anthem BCBS", "AvMed",
   "TRICARE", "Humana", "United Healthcare", "Florida VPK",
-  "Step Up for Students", "Other", "No Insurance / Self-Pay",
+  "Step Up for Students",
 ];
+
+const text = {
+  en: {
+    title: "Get a Free Consultation",
+    subtitle: "Take the first step — we\u2019ll call you within 24 hours.",
+    thankYou: "Thank You!",
+    thankYouMsg: "We\u2019ll reach out within 24 hours. Need immediate help?",
+    close: "Close",
+    name: "Your Name *",
+    phone: "Phone *",
+    email: "Email *",
+    childAge: "Child\u2019s Age",
+    insurance: "Insurance",
+    otherIns: "Other",
+    noIns: "No Insurance / Self-Pay",
+    submit: "Request Free Consultation",
+    callUs: "Or call us directly at",
+  },
+  es: {
+    title: "Consulta Gratuita",
+    subtitle: "D\u00e9 el primer paso — le llamaremos en 24 horas.",
+    thankYou: "\u00a1Gracias!",
+    thankYouMsg: "Nos comunicaremos en 24 horas. \u00bfNecesita ayuda inmediata?",
+    close: "Cerrar",
+    name: "Su Nombre *",
+    phone: "Tel\u00e9fono *",
+    email: "Correo *",
+    childAge: "Edad del Ni\u00f1o",
+    insurance: "Seguro",
+    otherIns: "Otro",
+    noIns: "Sin Seguro / Pago Privado",
+    submit: "Solicitar Consulta Gratuita",
+    callUs: "O ll\u00e1menos directamente al",
+  },
+};
 
 export default function LeadPopup() {
   const [show, setShow] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const pathname = usePathname();
+  const isSpanish = pathname.startsWith("/es");
+  const t = isSpanish ? text.es : text.en;
 
   useEffect(() => {
-    // Don't show if already dismissed this session
     if (sessionStorage.getItem("bab-popup-dismissed")) return;
 
     const timer = setTimeout(() => {
@@ -44,7 +82,6 @@ export default function LeadPopup() {
       setSubmitted(true);
       sessionStorage.setItem("bab-popup-dismissed", "true");
     } catch {
-      // Fallback — still show success to not frustrate user
       setSubmitted(true);
     }
   };
@@ -53,35 +90,27 @@ export default function LeadPopup() {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         className="fixed inset-0 bg-dark/40 backdrop-blur-sm z-[60] transition-opacity"
         onClick={handleDismiss}
       />
 
-      {/* Popup */}
       <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 pointer-events-none">
         <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full pointer-events-auto overflow-hidden animate-scale-in">
-          {/* Header */}
           <div className="bg-gradient-to-r from-blue to-blue-dark p-6 relative">
             <button
               onClick={handleDismiss}
               className="absolute top-4 right-4 w-8 h-8 bg-white/15 rounded-full flex items-center justify-center text-white hover:bg-white/25 transition-colors"
-              aria-label="Close"
+              aria-label={t.close}
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <h3 className="text-2xl font-bold text-white pr-8">
-              Get a Free Consultation
-            </h3>
-            <p className="text-white/70 text-sm mt-1">
-              Take the first step — we&apos;ll call you within 24 hours.
-            </p>
+            <h3 className="text-2xl font-bold text-white pr-8">{t.title}</h3>
+            <p className="text-white/70 text-sm mt-1">{t.subtitle}</p>
           </div>
 
-          {/* Body */}
           <div className="p-6">
             {submitted ? (
               <div className="text-center py-6">
@@ -90,16 +119,13 @@ export default function LeadPopup() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <h4 className="text-xl font-bold text-dark mb-2">Thank You!</h4>
+                <h4 className="text-xl font-bold text-dark mb-2">{t.thankYou}</h4>
                 <p className="text-gray text-sm">
-                  We&apos;ll reach out within 24 hours. Need immediate help?
-                  Call <a href="tel:+13057412218" className="text-blue font-bold">(305) 741-2218</a>
+                  {t.thankYouMsg}{" "}
+                  <a href="tel:+13057412218" className="text-blue font-bold">(305) 741-2218</a>
                 </p>
-                <button
-                  onClick={handleDismiss}
-                  className="mt-4 text-sm text-gray hover:text-dark transition-colors"
-                >
-                  Close
+                <button onClick={handleDismiss} className="mt-4 text-sm text-gray hover:text-dark transition-colors">
+                  {t.close}
                 </button>
               </div>
             ) : (
@@ -112,34 +138,30 @@ export default function LeadPopup() {
                 className="space-y-4"
               >
                 <input type="hidden" name="form-name" value="popup-lead" />
-                <p className="hidden">
-                  <label>Don&apos;t fill this out: <input name="bot-field" /></label>
-                </p>
+                <p className="hidden"><label><input name="bot-field" /></label></p>
 
-                <div>
-                  <input
-                    name="parentName"
-                    type="text"
-                    required
-                    placeholder="Your Name *"
-                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm transition-all"
-                  />
-                </div>
+                <input
+                  name="parentName"
+                  type="text"
+                  required
+                  placeholder={t.name}
+                  className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm"
+                />
 
                 <div className="grid grid-cols-2 gap-3">
                   <input
                     name="phone"
                     type="tel"
                     required
-                    placeholder="Phone *"
-                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm transition-all"
+                    placeholder={t.phone}
+                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm"
                   />
                   <input
                     name="email"
                     type="email"
                     required
-                    placeholder="Email *"
-                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm transition-all"
+                    placeholder={t.email}
+                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm"
                   />
                 </div>
 
@@ -147,32 +169,31 @@ export default function LeadPopup() {
                   <input
                     name="childAge"
                     type="text"
-                    placeholder="Child's Age"
-                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm transition-all"
+                    placeholder={t.childAge}
+                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark placeholder:text-gray/50 text-sm"
                   />
                   <select
                     name="insurance"
-                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark text-sm transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-blue-light/40 bg-warm-white text-dark text-sm"
                   >
-                    <option value="">Insurance</option>
+                    <option value="">{t.insurance}</option>
                     {insuranceOptions.map((ins) => (
                       <option key={ins} value={ins}>{ins}</option>
                     ))}
+                    <option value="Other">{t.otherIns}</option>
+                    <option value="No Insurance">{t.noIns}</option>
                   </select>
                 </div>
 
-                <button
-                  type="submit"
-                  className="btn-primary w-full justify-center"
-                >
-                  Request Free Consultation
+                <button type="submit" className="btn-primary w-full justify-center">
+                  {t.submit}
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
                 </button>
 
                 <p className="text-center text-[11px] text-gray/60">
-                  Or call us directly at{" "}
+                  {t.callUs}{" "}
                   <a href="tel:+13057412218" className="text-blue font-semibold">(305) 741-2218</a>
                 </p>
               </form>
