@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://buildablocktherapy.com/logo.svg",
-        width: 649,
-        height: 173,
+        url: "https://buildablocktherapy.com/images/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Build-A-Block Therapy - ABA Therapy in Kendall & Miami, FL",
       },
     ],
