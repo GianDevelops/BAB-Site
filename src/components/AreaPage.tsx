@@ -21,8 +21,16 @@ const services = [
 ];
 
 const insuranceProviders = [
-  "Cigna", "Aetna", "Magellan Health", "Anthem BCBS", "AvMed",
-  "TRICARE", "Humana", "United Healthcare", "Florida VPK", "Step Up for Students",
+  { name: "Cigna", logo: "/images/insurance/cigna.png" },
+  { name: "Aetna", logo: "/images/insurance/aetna.png" },
+  { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
+  { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
+  { name: "AvMed", logo: "/images/insurance/avmed.png" },
+  { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
+  { name: "Humana", logo: "/images/insurance/humana.png" },
+  { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
+  { name: "Florida VPK", logo: "/images/insurance/vpk.png" },
+  { name: "Step Up for Students", logo: "/images/insurance/stepup.svg" },
 ];
 
 export default function AreaPage({ city, slug, intro, description, nearby, mapQuery }: AreaPageProps) {
@@ -150,11 +158,18 @@ export default function AreaPage({ city, slug, intro, description, nearby, mapQu
                 We accept most major insurance plans for ABA therapy in {city}. Our team handles insurance verification
                 so you can focus on your child.
               </p>
-              <div className="flex flex-wrap gap-2 mb-10">
-                {insuranceProviders.map((ins) => (
-                  <span key={ins} className="bg-white px-4 py-2 rounded-full text-sm font-semibold text-dark shadow-sm border border-blue-light/20">
-                    {ins}
-                  </span>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-10">
+                {insuranceProviders.map((provider) => (
+                  <div key={provider.name} className="bg-white rounded-2xl p-3 flex flex-col items-center justify-center gap-2 shadow-sm border border-blue-light/20 min-h-[80px]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={provider.logo}
+                      alt={`${provider.name} logo - accepted insurance for ABA therapy in ${city}`}
+                      className="h-7 w-auto object-contain max-w-[100px]"
+                      loading="lazy"
+                    />
+                    <span className="text-[10px] font-semibold text-gray text-center leading-tight">{provider.name}</span>
+                  </div>
                 ))}
               </div>
 
