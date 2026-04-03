@@ -84,6 +84,14 @@ export default function RootLayout({
               url: "https://buildablocktherapy.com",
               telephone: "+1-305-741-2218",
               email: "info@buildablocktherapy.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "7990 SW 117th Ave, Suite 134",
+                addressLocality: "Kendall",
+                addressRegion: "FL",
+                postalCode: "33183",
+                addressCountry: "US",
+              },
               areaServed: [
                 { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
                 { "@type": "City", name: "Kendall, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },

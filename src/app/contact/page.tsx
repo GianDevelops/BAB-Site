@@ -267,6 +267,18 @@ export default function ContactPage() {
                       <p className="text-white/60 text-sm">Extended hours for your convenience</p>
                     </div>
                   </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center shrink-0">
+                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="font-semibold">7990 SW 117th Ave, Suite 134</p>
+                      <p className="text-white/60 text-sm">Kendall, FL 33183</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

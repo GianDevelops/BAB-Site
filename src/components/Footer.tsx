@@ -139,8 +139,8 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
                 <div className="text-white/80 text-sm">
-                  <p>Serving Miami-Dade</p>
-                  <p>County, FL</p>
+                  <p>7990 SW 117th Ave, Suite 134</p>
+                  <p>Kendall, FL 33183</p>
                 </div>
               </li>
             </ul>
