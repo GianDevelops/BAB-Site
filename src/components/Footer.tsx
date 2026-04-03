@@ -147,6 +147,33 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Areas We Serve */}
+        <div className="border-t border-white/10 pt-8 mb-8">
+          <h4 className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">Areas We Serve</h4>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {[
+              { name: "Kendall", href: "/areas/kendall" },
+              { name: "South Miami", href: "/areas/south-miami" },
+              { name: "Coral Gables", href: "/areas/coral-gables" },
+              { name: "Doral", href: "/areas/doral" },
+              { name: "Homestead", href: "/areas/homestead" },
+              { name: "Miami Beach", href: "/areas/miami-beach" },
+              { name: "Hialeah", href: "/areas/hialeah" },
+              { name: "Cutler Bay", href: "/areas/cutler-bay" },
+              { name: "Pinecrest", href: "/areas/pinecrest" },
+              { name: "Miami Lakes", href: "/areas/miami-lakes" },
+            ].map((area) => (
+              <Link
+                key={area.href}
+                href={area.href}
+                className="text-white/30 text-xs hover:text-white/60 transition-colors"
+              >
+                {area.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
