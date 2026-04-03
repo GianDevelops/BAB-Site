@@ -76,6 +76,9 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="alternate" hrefLang="en" href="https://buildablocktherapy.com" />
+        <link rel="alternate" hrefLang="es" href="https://buildablocktherapy.com/es" />
+        <link rel="alternate" hrefLang="x-default" href="https://buildablocktherapy.com" />
         <meta name="geo.region" content="US-FL" />
         <meta name="geo.placename" content="Miami" />
         <script
