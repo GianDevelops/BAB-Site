@@ -304,6 +304,20 @@ export default function ContactPage() {
                 </p>
                 <p className="text-blue font-semibold text-sm">Ask us during your consultation.</p>
               </div>
+
+              {/* Google Map */}
+              <div className="rounded-3xl overflow-hidden shadow-sm border border-blue-light/20">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.2!2d-80.3736!3d25.6866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQxJzEyLjAiTiA4MMKwMjInMjUuMCJX!5e0!3m2!1sen!2sus!4v1"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Build-A-Block Therapy location in Kendall, FL"
+                />
+              </div>
             </div>
           </div>
         </div>

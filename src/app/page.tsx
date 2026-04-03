@@ -258,7 +258,7 @@ export default function Home() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={service.img}
-                    alt={service.title}
+                    alt={`${service.title} - ABA therapy service in Kendall, FL`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />

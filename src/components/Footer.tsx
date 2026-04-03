@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src="/logo.svg" alt="Build-A-Block" className="h-14 mb-5 brightness-0 invert" />
+            <img src="/logo.svg" alt="Build-A-Block Therapy - ABA Therapy in Kendall and Miami, FL" className="h-14 mb-5 brightness-0 invert" />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Where every child&apos;s potential is nurtured. Providing compassionate ABA therapy across Miami-Dade County.
             </p>

@@ -7,11 +7,11 @@ import LeadPopup from "@/components/LeadPopup";
 export const metadata: Metadata = {
   metadataBase: new URL("https://buildablocktherapy.com"),
   title: {
-    default: "Build-A-Block Children Therapy Solutions | ABA Therapy Miami",
+    default: "ABA Therapy in Kendall & Miami, FL | Build-A-Block Therapy",
     template: "%s | Build-A-Block Therapy",
   },
   description:
-    "Compassionate ABA therapy for children with autism in Miami-Dade County. Individualized in-home therapy, social skills groups, parent training & more. Call (305) 741-2218.",
+    "Build-A-Block Therapy provides ABA therapy for children with autism in Kendall, Miami, and Miami-Dade County. In-home therapy, social skills groups, parent training & more. Call (305) 741-2218.",
   keywords: [
     "ABA therapy Miami",
     "ABA therapy Kendall",
@@ -37,19 +37,27 @@ export const metadata: Metadata = {
     "autism services Miami-Dade",
   ],
   openGraph: {
-    title: "Build-A-Block Children Therapy Solutions | ABA Therapy Miami",
+    title: "ABA Therapy in Kendall & Miami, FL | Build-A-Block Therapy",
     description:
-      "Where every child's potential is nurtured. Compassionate, individualized ABA therapy for children with autism across Miami-Dade County.",
+      "Where every child's potential is nurtured. Compassionate, individualized ABA therapy for children with autism in Kendall, Miami, and Miami-Dade County.",
     url: "https://buildablocktherapy.com",
     siteName: "Build-A-Block Children Therapy Solutions",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://buildablocktherapy.com/logo.svg",
+        width: 649,
+        height: 173,
+        alt: "Build-A-Block Therapy - ABA Therapy in Kendall & Miami, FL",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Build-A-Block Children Therapy Solutions | ABA Therapy Miami",
+    title: "ABA Therapy in Kendall & Miami, FL | Build-A-Block Therapy",
     description:
-      "Compassionate ABA therapy for children with autism in Miami. In-home therapy, social skills, parent training & more.",
+      "ABA therapy for children with autism in Kendall & Miami. In-home therapy, social skills, parent training & more.",
   },
   robots: {
     index: true,
@@ -79,11 +87,14 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": ["LocalBusiness", "MedicalBusiness"],
               name: "Build-A-Block Children Therapy Solutions Inc",
+              alternateName: "BAB Therapy",
               description:
-                "Compassionate ABA therapy for children with autism in Miami-Dade County. Individualized in-home therapy, social skills groups, parent training & telehealth services.",
+                "Build-A-Block Therapy provides Applied Behavior Analysis (ABA) therapy for children with autism spectrum disorder in Kendall, Miami, and Miami-Dade County, Florida. Our board-certified behavior analysts (BCBAs) deliver individualized, evidence-based treatment in home, school, and community settings. We accept most major insurance plans and provide bilingual services in English and Spanish.",
               url: "https://buildablocktherapy.com",
               telephone: "+1-305-741-2218",
               email: "info@buildablocktherapy.com",
+              logo: "https://buildablocktherapy.com/logo.svg",
+              image: "https://buildablocktherapy.com/logo.svg",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "7990 SW 117th Ave, Suite 134",
@@ -118,7 +129,7 @@ export default function RootLayout({
                 { "@type": "City", name: "Pinecrest, FL" },
                 { "@type": "City", name: "Miami Lakes, FL" },
               ],
-              geo: { "@type": "GeoCoordinates", latitude: 25.7617, longitude: -80.1918 },
+              geo: { "@type": "GeoCoordinates", latitude: 25.6866, longitude: -80.3736 },
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -127,7 +138,8 @@ export default function RootLayout({
                   closes: "20:00",
                 },
               ],
-              priceRange: "$$",
+              priceRange: "Varies by insurance",
+              currenciesAccepted: "USD",
               medicalSpecialty: "Applied Behavior Analysis",
               availableService: [
                 { "@type": "MedicalTherapy", name: "In-Home ABA Therapy" },

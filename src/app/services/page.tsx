@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTABanner from "@/components/CTABanner";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "ABA Therapy Services in Miami — In-Home, Telehealth & More",
+  title: "ABA Therapy Services in Kendall & Miami — In-Home, Telehealth & More",
   description:
-    "Explore our full range of ABA therapy services: in-home therapy, social skills groups, parent training, school consultation, tutoring, and telehealth. Serving Miami-Dade County.",
+    "Explore our ABA therapy services in Kendall and Miami-Dade County: in-home therapy, social skills groups, parent training, school consultation, tutoring, and telehealth. Call (305) 741-2218.",
   alternates: { canonical: "https://buildablocktherapy.com/services" },
 };
 
@@ -150,6 +151,31 @@ const approaches = [
 export default function ServicesPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }]} />
+      {/* Service schema for each service */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(services.map((s) => ({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: s.title,
+            description: s.description,
+            provider: {
+              "@type": "MedicalBusiness",
+              name: "Build-A-Block Children Therapy Solutions Inc",
+              url: "https://buildablocktherapy.com",
+            },
+            areaServed: [
+              { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
+              { "@type": "City", name: "Kendall, FL" },
+              { "@type": "City", name: "South Miami, FL" },
+              { "@type": "City", name: "Coral Gables, FL" },
+            ],
+            serviceType: "ABA Therapy",
+          }))),
+        }}
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-cream via-warm-white to-blue-lightest overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -208,7 +234,7 @@ export default function ServicesPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={service.img}
-                    alt={service.title}
+                    alt={`${service.title} in Kendall and Miami, FL - Build-A-Block Therapy`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />

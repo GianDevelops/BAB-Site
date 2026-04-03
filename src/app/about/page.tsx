@@ -1,17 +1,57 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTABanner from "@/components/CTABanner";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "About Us — Meet the Team Behind Build-A-Block Therapy",
+  title: "About Us — Board Certified Behavior Analysts in Kendall, FL",
   description:
-    "Meet the compassionate team at Build-A-Block Children Therapy Solutions. Co-founded by Kristel Arauz, BCBA, and Ana Jacome, BS, bringing 17+ combined years of ABA experience to families in Miami.",
+    "Meet the team at Build-A-Block Therapy in Kendall, FL. Co-founded by Kristel Arauz, BCBA, and Ana Jacome, BS, bringing 17+ combined years of ABA therapy experience to families in Miami-Dade County.",
   alternates: { canonical: "https://buildablocktherapy.com/about" },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "About Us", href: "/about" }]} />
+      {/* Person schema for founders */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Kristel Arauz",
+              jobTitle: "Co-Founder, Board Certified Behavior Analyst",
+              worksFor: { "@type": "MedicalBusiness", name: "Build-A-Block Children Therapy Solutions Inc", url: "https://buildablocktherapy.com" },
+              hasCredential: [
+                { "@type": "EducationalOccupationalCredential", credentialCategory: "Board Certification", name: "BCBA" },
+                { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "Master of Science in Applied Behavior Analysis" },
+              ],
+              alumniOf: [
+                { "@type": "CollegeOrUniversity", name: "University of Florida" },
+                { "@type": "CollegeOrUniversity", name: "Western New England University" },
+              ],
+              knowsLanguage: ["English", "Spanish"],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ana Jacome",
+              jobTitle: "Co-Founder",
+              worksFor: { "@type": "MedicalBusiness", name: "Build-A-Block Children Therapy Solutions Inc", url: "https://buildablocktherapy.com" },
+              hasCredential: [
+                { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "Bachelor of Science in Biology" },
+              ],
+              alumniOf: [
+                { "@type": "CollegeOrUniversity", name: "Florida International University" },
+              ],
+              knowsLanguage: ["English", "Spanish"],
+            },
+          ]),
+        }}
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-lightest via-warm-white to-cream overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -54,6 +94,12 @@ export default function AboutPage() {
                 coordinate with your child&apos;s school, and keep you informed every step of the way. Because when
                 your family feels supported, your child thrives.
               </p>
+              <Link href="/services" className="text-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all mt-4">
+                Explore our services
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
             </div>
 
             {/* Values blocks */}
@@ -90,7 +136,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-blue-light/20 card-hover">
               <img
                 src="/images/kristel-arauz.jpg"
-                alt="Kristel Arauz, MS, BCBA — Co-Founder of Build-A-Block Children Therapy Solutions"
+                alt="Kristel Arauz, MS, BCBA - Board Certified Behavior Analyst and Co-Founder of Build-A-Block Therapy in Kendall, FL"
                 className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
               />
               <h3 className="text-2xl font-bold text-dark mb-1">Kristel Arauz, MS, BCBA</h3>
@@ -117,7 +163,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-blue-light/20 card-hover">
               <img
                 src="/images/ana-jacome.jpg"
-                alt="Ana Jacome, BS — Co-Founder of Build-A-Block Children Therapy Solutions"
+                alt="Ana Jacome, BS - Co-Founder of Build-A-Block Therapy in Kendall, FL"
                 className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
               />
               <h3 className="text-2xl font-bold text-dark mb-1">Ana Jacome, BS</h3>

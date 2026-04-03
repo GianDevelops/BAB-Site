@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Careers — Join the Build-A-Block Therapy Team",
+  title: "Careers — BCBA & RBT Jobs in Kendall & Miami, FL",
   description:
-    "Join our passionate team of BCBAs, RBTs, and Behavior Analysts making a difference for children with autism in Miami. Supportive culture, ongoing training, and meaningful work.",
+    "Join Build-A-Block Therapy in Kendall, FL. We're hiring BCBAs and RBTs to provide ABA therapy for children with autism in Miami-Dade County. Competitive pay, monthly training, flexible schedule.",
   alternates: { canonical: "https://buildablocktherapy.com/careers" },
 };
 
@@ -120,6 +121,7 @@ const perks = [
 export default function CareersPage() {
   return (
     <>
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Careers", href: "/careers" }]} />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-cream via-warm-white to-blue-lightest overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

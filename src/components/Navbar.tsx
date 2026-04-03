@@ -41,7 +41,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <img
               src="/logo.svg"
-              alt="Build-A-Block Children Therapy Solutions"
+              alt="Build-A-Block Therapy - ABA Therapy Provider in Kendall, Miami, FL"
               className="h-14 w-auto"
             />
           </Link>
