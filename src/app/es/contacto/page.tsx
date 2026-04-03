@@ -155,6 +155,17 @@ export default function ContactoPage() {
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center shrink-0">
                       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Lun – Sáb, 9 AM – 8 PM</p>
+                      <p className="text-white/60 text-sm">Horario extendido para su conveniencia</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center shrink-0">
+                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                       </svg>
@@ -165,6 +176,43 @@ export default function ContactoPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="bg-orange/10 rounded-3xl p-8 border border-orange/20">
+                <h3 className="text-lg font-bold text-dark mb-3">¿Refiriendo a un Niño?</h3>
+                <p className="text-gray text-sm leading-relaxed mb-4">
+                  Recibimos referidos de médicos, neurólogos, psicólogos y otros proveedores de salud.
+                  Contáctenos directamente para un proceso de admisión simplificado.
+                </p>
+                <a href="mailto:info@buildablocktherapy.com" className="text-orange font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                  Enviar un Referido
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+
+              <div className="bg-white rounded-3xl p-8 shadow-sm border border-blue-light/20">
+                <h3 className="text-lg font-bold text-dark mb-3">Becas y Subvenciones</h3>
+                <p className="text-gray text-sm leading-relaxed mb-4">
+                  Hay ayuda financiera disponible. Podemos guiarle a través de opciones como Step Up for Students,
+                  becas de Autism Care Today y más.
+                </p>
+                <p className="text-blue font-semibold text-sm">Pregunte durante su consulta.</p>
+              </div>
+
+              {/* Google Map */}
+              <div className="rounded-3xl overflow-hidden shadow-sm border border-blue-light/20">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.2!2d-80.3736!3d25.6866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQxJzEyLjAiTiA4MMKwMjInMjUuMCJX!5e0!3m2!1ses!2sus!4v1"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación de Build-A-Block Therapy en Kendall, FL"
+                />
               </div>
             </div>
           </div>
