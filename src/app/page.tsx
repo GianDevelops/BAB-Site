@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     q: "How early can my child start ABA therapy?",
-    a: "Children can begin ABA therapy as early as 14 months old. Research shows that early intervention leads to the best outcomes. The sooner your child begins therapy, the greater the impact on their development. We work with toddlers through teenagers across Miami-Dade and Broward County.",
+    a: "Children can begin ABA therapy as early as 14 months old. Research shows that early intervention leads to the best outcomes. The sooner your child begins therapy, the greater the impact on their development. We work with toddlers through teenagers across Miami-Dade County.",
   },
   {
     q: "Does insurance cover ABA therapy in Florida?",
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: "What areas in Miami do you serve?",
-    a: "We provide in-home ABA therapy throughout Miami-Dade County and Broward County, including Kendall, South Miami, Coral Gables, Doral, Homestead, Miami Beach, Hialeah, and surrounding communities. We also offer telehealth services statewide.",
+    a: "We provide in-home ABA therapy throughout Miami-Dade County, including Kendall, South Miami, Coral Gables, Doral, Homestead, Miami Beach, Hialeah, and surrounding communities. We also offer telehealth services statewide.",
   },
   {
     q: "What makes Build-A-Block different from other ABA providers?",

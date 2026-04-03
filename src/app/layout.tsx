@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Build-A-Block Therapy",
   },
   description:
-    "Compassionate ABA therapy for children with autism in Miami-Dade & Broward County. Individualized in-home therapy, social skills groups, parent training & more. Call (305) 741-2218.",
+    "Compassionate ABA therapy for children with autism in Miami-Dade County. Individualized in-home therapy, social skills groups, parent training & more. Call (305) 741-2218.",
   keywords: [
     "ABA therapy Miami",
     "ABA therapy Kendall",
@@ -27,7 +27,9 @@ export const metadata: Metadata = {
     "early intervention autism Miami",
     "in-home ABA therapy Miami",
     "bilingual ABA therapy Miami",
-    "autism therapy Broward",
+    "ABA therapy Coral Gables",
+    "ABA therapy Doral",
+    "ABA therapy Homestead",
     "ABA therapy for toddlers Miami",
     "social skills therapy Miami",
     "parent training ABA Miami",
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Build-A-Block Children Therapy Solutions | ABA Therapy Miami",
     description:
-      "Where every child's potential is nurtured. Compassionate, individualized ABA therapy for children with autism across Miami-Dade & Broward County.",
+      "Where every child's potential is nurtured. Compassionate, individualized ABA therapy for children with autism across Miami-Dade County.",
     url: "https://buildablocktherapy.com",
     siteName: "Build-A-Block Children Therapy Solutions",
     locale: "en_US",
@@ -78,19 +80,36 @@ export default function RootLayout({
               "@type": ["LocalBusiness", "MedicalBusiness"],
               name: "Build-A-Block Children Therapy Solutions Inc",
               description:
-                "Compassionate ABA therapy for children with autism in Miami-Dade & Broward County. Individualized in-home therapy, social skills groups, parent training & telehealth services.",
+                "Compassionate ABA therapy for children with autism in Miami-Dade County. Individualized in-home therapy, social skills groups, parent training & telehealth services.",
               url: "https://buildablocktherapy.com",
               telephone: "+1-305-741-2218",
               email: "info@buildablocktherapy.com",
               areaServed: [
                 { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
-                { "@type": "AdministrativeArea", name: "Broward County, FL" },
+                { "@type": "City", name: "Kendall, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "South Miami, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Coral Gables, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Doral, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Homestead, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Miami Beach, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Hialeah, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Cutler Bay, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Pinecrest, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
+                { "@type": "City", name: "Miami Lakes, FL", containedInPlace: { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" } },
               ],
-              serviceArea: {
-                "@type": "GeoCircle",
-                geoMidpoint: { "@type": "GeoCoordinates", latitude: 25.7617, longitude: -80.1918 },
-                geoRadius: "50000",
-              },
+              serviceArea: [
+                { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
+                { "@type": "City", name: "Kendall, FL" },
+                { "@type": "City", name: "South Miami, FL" },
+                { "@type": "City", name: "Coral Gables, FL" },
+                { "@type": "City", name: "Doral, FL" },
+                { "@type": "City", name: "Homestead, FL" },
+                { "@type": "City", name: "Miami Beach, FL" },
+                { "@type": "City", name: "Hialeah, FL" },
+                { "@type": "City", name: "Cutler Bay, FL" },
+                { "@type": "City", name: "Pinecrest, FL" },
+                { "@type": "City", name: "Miami Lakes, FL" },
+              ],
               geo: { "@type": "GeoCoordinates", latitude: 25.7617, longitude: -80.1918 },
               openingHoursSpecification: [
                 {

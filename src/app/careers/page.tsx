@@ -31,7 +31,7 @@ const positions = [
       "Active RBT certification (or willingness to obtain within 30 days)",
       "High school diploma required; Bachelor's degree preferred",
       "Experience with children, especially those with developmental disabilities",
-      "Reliable transportation for in-home sessions across Miami-Dade/Broward",
+      "Reliable transportation for in-home sessions across Miami-Dade County",
       "Patience, creativity, and genuine love for working with kids",
     ],
   },

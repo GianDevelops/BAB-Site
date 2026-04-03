@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <img src="/logo.svg" alt="Build-A-Block" className="h-14 mb-5 brightness-0 invert" />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Where every child&apos;s potential is nurtured. Providing compassionate ABA therapy across Miami-Dade and Broward County.
+              Where every child&apos;s potential is nurtured. Providing compassionate ABA therapy across Miami-Dade County.
             </p>
             <div className="flex gap-3">
               <a
@@ -139,8 +139,8 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
                 <div className="text-white/80 text-sm">
-                  <p>Serving Miami-Dade &</p>
-                  <p>Broward County, FL</p>
+                  <p>Serving Miami-Dade</p>
+                  <p>County, FL</p>
                 </div>
               </li>
             </ul>
@@ -153,7 +153,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Build-A-Block Children Therapy Solutions Inc. All rights reserved.
           </p>
           <p className="text-white/40 text-xs">
-            Serving families across Miami-Dade and Broward County with love and dedication.
+            Serving families across Miami-Dade County with love and dedication.
           </p>
         </div>
       </div>

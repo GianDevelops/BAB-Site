@@ -5,7 +5,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "ABA Therapy Services in Miami — In-Home, Telehealth & More",
   description:
-    "Explore our full range of ABA therapy services: in-home therapy, social skills groups, parent training, school consultation, tutoring, and telehealth. Serving Miami-Dade & Broward County.",
+    "Explore our full range of ABA therapy services: in-home therapy, social skills groups, parent training, school consultation, tutoring, and telehealth. Serving Miami-Dade County.",
   alternates: { canonical: "https://buildablocktherapy.com/services" },
 };
 
