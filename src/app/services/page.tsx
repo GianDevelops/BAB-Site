@@ -251,7 +251,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <span className="text-orange font-semibold text-sm uppercase tracking-wider">Our Approach</span>
             <h2 className="text-3xl md:text-4xl font-bold text-dark mt-3 mb-5">
-              Evidence-Based Treatment Methods
+              Evidence-Based ABA Therapy Methods
             </h2>
             <p className="text-gray text-lg max-w-2xl mx-auto">
               Our BCBAs draw from a toolkit of proven ABA methodologies, selecting the right combination
@@ -273,8 +273,85 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* What to Expect */}
+      <section className="py-20 bg-warm-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-orange font-semibold text-sm uppercase tracking-wider">Getting Started</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mt-3 mb-6">
+                What to Expect When You Start ABA Therapy
+              </h2>
+              <p className="text-gray leading-relaxed mb-4">
+                Starting ABA therapy is a big step, and we want you to feel confident and informed from day one.
+                Here&apos;s what the process looks like when you choose Build-A-Block Therapy.
+              </p>
+              <div className="space-y-5">
+                {[
+                  { title: "Free Consultation", desc: "Call us or fill out our form. We'll discuss your child's needs, answer your questions, and explain how ABA therapy can help your family." },
+                  { title: "Insurance Verification", desc: "Our team contacts your insurance company to verify your benefits. We handle all the paperwork so you don't have to. Most families pay little to nothing out of pocket." },
+                  { title: "Comprehensive Assessment", desc: "Your BCBA conducts a thorough evaluation of your child's communication, social skills, daily living abilities, and behaviors to understand the full picture." },
+                  { title: "Individualized Treatment Plan", desc: "Based on the assessment, we create a treatment plan with specific goals tailored to your child's strengths, challenges, and your family's priorities." },
+                  { title: "Therapy Begins", desc: "Your child's dedicated therapist begins sessions in your home, working one-on-one with your child while your BCBA oversees the program and adjusts the plan as your child grows." },
+                ].map((step, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-blue/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-xs font-bold text-blue">{i + 1}</span>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-dark text-sm mb-1">{step.title}</h3>
+                      <p className="text-gray text-sm leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-blue rounded-3xl p-8 text-white">
+                <h3 className="text-xl font-bold mb-3">Why Families in Miami Choose Build-A-Block</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Board Certified Behavior Analysts (BCBAs) with 10+ years experience",
+                    "Small caseloads for personalized attention",
+                    "In-home ABA therapy throughout Miami-Dade County",
+                    "Bilingual services in English and Spanish",
+                    "Most major insurance plans accepted",
+                    "Free consultation and insurance verification",
+                    "Flexible scheduling including evenings and Saturdays",
+                    "Parent training included in every program",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-orange mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                      <span className="text-white/90 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-cream rounded-3xl p-8">
+                <h3 className="text-lg font-bold text-dark mb-3">Areas We Serve</h3>
+                <p className="text-gray text-sm leading-relaxed mb-4">
+                  Build-A-Block Therapy provides in-home ABA therapy throughout Miami-Dade County, including
+                  Kendall, South Miami, Coral Gables, Doral, Homestead, Miami Beach, Hialeah, Cutler Bay,
+                  Pinecrest, and Miami Lakes. We also offer telehealth services throughout Florida.
+                </p>
+                <Link href="/contact" className="text-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                  Check if we serve your area
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTABanner
-        title="Not Sure Which Service is Right for Your Child?"
+        title="Not Sure Which ABA Therapy Service is Right for Your Child?"
         subtitle="Our team will help you find the perfect fit. Schedule a free consultation and let's talk about your child's unique needs."
       />
     </>

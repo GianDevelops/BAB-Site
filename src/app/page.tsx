@@ -213,7 +213,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <span className="text-orange font-semibold text-sm uppercase tracking-wider">Why Families Choose Us</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mt-3 mb-5">
-              Built on Love, Backed by Science
+              ABA Therapy Built on Love, Backed by Science
             </h2>
             <p className="text-gray text-lg max-w-2xl mx-auto">
               We know choosing a therapy provider is one of the biggest decisions you&apos;ll make
@@ -297,7 +297,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <span className="text-orange font-semibold text-sm uppercase tracking-wider">Our Services</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mt-3 mb-5">
-              Comprehensive Care, Tailored to Your Child
+              ABA Therapy Services Tailored to Your Child
             </h2>
             <p className="text-gray text-lg max-w-2xl mx-auto">
               From in-home therapy to telehealth, we offer a complete range of ABA services
@@ -391,7 +391,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <span className="text-orange font-semibold text-sm uppercase tracking-wider">Parent Testimonials</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mt-3 mb-5">
-              Hear From Families Like Yours
+              What Miami Families Say About Our ABA Therapy
             </h2>
           </div>
 
@@ -423,7 +423,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <span className="text-orange font-semibold text-sm uppercase tracking-wider">Insurance Accepted</span>
             <h2 className="text-3xl md:text-4xl font-bold text-dark mt-3 mb-5">
-              We Work With Your Insurance
+              Insurance Accepted for ABA Therapy
             </h2>
             <p className="text-gray text-lg max-w-2xl mx-auto">
               Most insurance plans cover ABA therapy in Florida. We handle the verification
