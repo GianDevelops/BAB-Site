@@ -25,7 +25,7 @@ export default function BlogPost() {
           <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="bg-blue/10 text-blue text-xs font-bold px-3 py-1 rounded-full">Parent Guide</span>
-              <span className="text-gray text-sm">April 4, 2026</span>
+              <span className="text-gray text-sm">March 23, 2026</span>
               <span className="text-gray text-sm">8 min read</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark leading-tight mb-6">

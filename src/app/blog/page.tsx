@@ -11,12 +11,31 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "signs-your-child-may-benefit-from-aba-therapy",
+    title: "5 Signs Your Child May Benefit from ABA Therapy",
+    excerpt: "Every child develops at their own pace. But as a parent, you have instincts about when something might need extra attention. Here are five signs that many parents recognize before seeking an evaluation.",
+    date: "April 6, 2026",
+    readTime: "9 min read",
+    category: "Parent Guide",
+    author: "Kristel Arauz, MS, BCBA",
+  },
+  {
+    slug: "does-insurance-cover-aba-therapy-florida",
+    title: "Does Insurance Cover ABA Therapy in Florida? A Parent's Guide",
+    excerpt: "One of the first questions parents ask when exploring ABA therapy is whether insurance will cover the cost. The short answer is yes, but the details matter. Here's everything you need to know.",
+    date: "March 30, 2026",
+    readTime: "7 min read",
+    category: "Insurance & Finance",
+    author: "Ana Jacome, BS",
+  },
+  {
     slug: "how-to-choose-aba-therapy-provider-miami",
     title: "How to Choose the Right ABA Therapy Provider in Miami",
     excerpt: "With dozens of options across Miami-Dade County, choosing the right ABA provider can feel overwhelming. This guide covers what to look for, what questions to ask, and red flags to watch out for.",
-    date: "April 4, 2026",
+    date: "March 23, 2026",
     readTime: "8 min read",
     category: "Parent Guide",
+    author: "Kristel Arauz, MS, BCBA",
   },
 ];
 
@@ -56,6 +75,7 @@ export default function BlogPage() {
                   {post.title}
                 </h2>
                 <p className="text-gray leading-relaxed mb-4">{post.excerpt}</p>
+                <p className="text-sm text-gray/60 mb-4">By {post.author}</p>
                 <span className="text-blue font-semibold text-sm flex items-center gap-2">
                   Read Article
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
