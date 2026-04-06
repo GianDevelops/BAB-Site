@@ -57,7 +57,7 @@ export default function LeadPopup() {
 
     const timer = setTimeout(() => {
       setShow(true);
-    }, 20000);
+    }, 30000);
 
     return () => clearTimeout(timer);
   }, []);
