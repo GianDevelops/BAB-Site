@@ -237,6 +237,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== HOW ABA WORKS ===== */}
+      <section className="py-20 bg-gradient-to-b from-warm-white to-cream relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-orange font-semibold text-sm uppercase tracking-wider">How It Works</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mt-3 mb-5">
+              What ABA Therapy Looks Like for Your Child
+            </h2>
+            <p className="text-gray text-lg max-w-2xl mx-auto">
+              Applied Behavior Analysis is the gold standard treatment for children with autism,
+              endorsed by the American Academy of Pediatrics and backed by over 50 years of research.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Assessment",
+                desc: "Your BCBA conducts a comprehensive evaluation of your child's communication, social skills, daily living abilities, and any challenging behaviors.",
+              },
+              {
+                step: "02",
+                title: "Personalized Plan",
+                desc: "Based on the assessment, we design a treatment plan with specific, measurable goals chosen because they matter to your family.",
+              },
+              {
+                step: "03",
+                title: "ABA Therapy",
+                desc: "Sessions use ABA teaching, natural environment learning, and positive reinforcement to make learning engaging and fun.",
+              },
+              {
+                step: "04",
+                title: "Data-Driven Progress",
+                desc: "We track progress on every goal, every session. You receive regular reports so you always know where things stand.",
+              },
+              {
+                step: "05",
+                title: "Family Involvement",
+                desc: "We train and support you in the same strategies our therapists use so you can reinforce skills between sessions at home.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-3xl p-7 shadow-sm border border-blue-light/20 card-hover">
+                <div className="w-10 h-10 bg-blue/10 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-sm font-bold text-blue">{item.step}</span>
+                </div>
+                <h3 className="text-base font-bold text-dark mb-3 whitespace-nowrap">{item.title}</h3>
+                <p className="text-gray text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== SERVICES ===== */}
       <section className="py-20 bg-gradient-to-b from-warm-white to-blue-lightest/30 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -288,6 +342,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== WHO WE HELP ===== */}
+      <section className="py-20 bg-warm-white relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-orange font-semibold text-sm uppercase tracking-wider">Who We Help</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mt-3 mb-6">
+                Is ABA Therapy Right for Your Child?
+              </h2>
+              <p className="text-gray leading-relaxed mb-6">
+                Build-A-Block Therapy works with children from 14 months through their teenage years
+                who have been diagnosed with or are being evaluated for autism and related developmental challenges.
+                If you&apos;re unsure whether your child qualifies, call us for a free consultation — we&apos;ll help you figure it out.
+              </p>
+              <Link href="/contact" className="btn-primary">
+                Get a Free Consultation
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { title: "Autism Spectrum Disorder", desc: "Individualized therapy addressing communication, social skills, and behavior." },
+                { title: "Speech & Language Delays", desc: "Building functional communication through evidence-based ABA techniques." },
+                { title: "Social Difficulties", desc: "Teaching friendship, empathy, turn-taking, and emotional regulation." },
+                { title: "Challenging Behaviors", desc: "Replacing aggression, self-injury, or elopement with positive alternatives." },
+                { title: "Daily Living Skills", desc: "Building independence in dressing, eating, toileting, and routines." },
+                { title: "School Readiness", desc: "Preparing children to succeed in classroom settings with attention and focus skills." },
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-2xl p-5 shadow-sm border border-blue-light/20">
+                  <h3 className="font-bold text-dark text-sm mb-2">{item.title}</h3>
+                  <p className="text-gray text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== TESTIMONIALS ===== */}
       <section className="py-20 bg-warm-white relative overflow-hidden">
         <div className="absolute top-10 right-10 w-32 h-32 bg-orange/5 rounded-[30px] rotate-12 animate-float" />
@@ -303,7 +397,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
-              <div key={i} className="bg-white rounded-3xl p-8 shadow-sm border border-blue-light/20 card-hover relative">
+              <div key={i} className="bg-white rounded-3xl p-8 shadow-sm border border-blue-light/20 card-hover relative flex flex-col">
                 <div className="absolute top-6 right-8 text-6xl text-blue/10 font-serif leading-none">&ldquo;</div>
                 <div className="flex gap-1 mb-4">
                   {[...Array(t.stars)].map((_, j) => (
@@ -312,8 +406,8 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray text-sm leading-relaxed mb-6 relative z-10">&ldquo;{t.quote}&rdquo;</p>
-                <div>
+                <p className="text-gray text-sm leading-relaxed relative z-10 flex-1">&ldquo;{t.quote}&rdquo;</p>
+                <div className="mt-6">
                   <p className="font-bold text-dark">{t.name}</p>
                   <p className="text-sm text-blue">{t.role}</p>
                 </div>

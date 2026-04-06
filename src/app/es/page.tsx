@@ -5,31 +5,37 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 const servicios = [
   {
     id: "en-el-hogar",
+    img: "/images/services/in-home.jpg",
     title: "Terapia ABA en el Hogar",
     description: "Terapia personalizada en la comodidad de su hogar. Nos reunimos con su hijo donde se siente más seguro, creando un ambiente de aprendizaje natural que produce resultados duraderos.",
   },
   {
     id: "habilidades-sociales",
+    img: "/images/services/social-skills.jpg",
     title: "Grupos de Habilidades Sociales",
     description: "Sesiones grupales estructuradas y divertidas donde los niños practican comunicación, construcción de amistades y regulación emocional con compañeros en un entorno de apoyo.",
   },
   {
     id: "entrenamiento-padres",
+    img: "/images/services/parent-training.jpg",
     title: "Entrenamiento para Padres",
     description: "Le empoderamos con estrategias ABA comprobadas para que pueda reforzar el progreso de su hijo en casa. Porque usted es el mayor defensor de su hijo.",
   },
   {
     id: "consulta-escolar",
+    img: "/images/services/school-consultation.jpg",
     title: "Consulta Escolar",
     description: "Colaboramos con maestros y escuelas para asegurar que su hijo prospere en el aula, desde apoyo con IEP hasta planes de comportamiento y capacitación del personal.",
   },
   {
     id: "tutoria",
+    img: "/images/services/tutoring.jpg",
     title: "Tutoría Basada en ABA",
     description: "Apoyo académico que construye confianza y conocimiento. Nuestras sesiones individuales usan refuerzo positivo para ayudar a su hijo a tener éxito en la escuela.",
   },
   {
     id: "telesalud",
+    img: "/images/services/telehealth.jpg",
     title: "Servicios de Telesalud",
     description: "Terapia ABA de calidad desde cualquier lugar. Nuestras sesiones virtuales brindan la misma atención experta a su pantalla, perfectas para entrenamiento de padres y apoyo continuo.",
   },
@@ -207,6 +213,70 @@ export default function PaginaInicio() {
         </div>
       </section>
 
+      {/* POR QUÉ ELEGIRNOS */}
+      <section className="py-20 bg-warm-white relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-orange font-semibold text-sm uppercase tracking-wider">Por Qué las Familias Nos Eligen</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mt-3 mb-5">
+              Construido con Amor, Respaldado por la Ciencia
+            </h2>
+            <p className="text-gray text-lg max-w-2xl mx-auto">
+              Sabemos que elegir un proveedor de terapia es una de las decisiones más importantes que
+              tomará por su hijo. Por eso las familias de Miami confían en Build-A-Block.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: "100% Individualizado", desc: "Sin programas genéricos. Cada plan de tratamiento está diseñado específicamente para las fortalezas y necesidades únicas de su hijo." },
+              { title: "En Su Hogar", desc: "Vamos a usted. Su hijo aprende en el entorno donde se siente más cómodo, su propio hogar." },
+              { title: "Equipo Bilingüe", desc: "Fluido en inglés y español. Nos aseguramos de que nada se pierda en la traducción cuando se trata del cuidado de su hijo." },
+              { title: "La Familia Primero", desc: "No solo trabajamos con su hijo, empoderamos a toda su familia con las herramientas para apoyar su crecimiento." },
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 card-hover border border-blue-light/20">
+                <h3 className="text-xl font-bold text-dark mb-3">{item.title}</h3>
+                <p className="text-gray text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CÓMO FUNCIONA */}
+      <section className="py-20 bg-gradient-to-b from-warm-white to-cream relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-orange font-semibold text-sm uppercase tracking-wider">Cómo Funciona</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mt-3 mb-5">
+              Cómo es la Terapia ABA para Su Hijo
+            </h2>
+            <p className="text-gray text-lg max-w-2xl mx-auto">
+              El Análisis de Comportamiento Aplicado es el tratamiento de referencia para niños con autismo,
+              respaldado por la Academia Americana de Pediatría y más de 50 años de investigación.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { step: "01", title: "Evaluación", desc: "Su BCBA realiza una evaluación integral de la comunicación, habilidades sociales, habilidades de vida diaria y cualquier comportamiento desafiante de su hijo." },
+              { step: "02", title: "Plan Personalizado", desc: "Basándonos en la evaluación, diseñamos un plan de tratamiento con metas específicas y medibles elegidas porque importan a su familia." },
+              { step: "03", title: "Terapia ABA", desc: "Las sesiones utilizan enseñanza ABA, aprendizaje en ambiente natural y refuerzo positivo para hacer el aprendizaje atractivo y divertido." },
+              { step: "04", title: "Progreso Basado en Datos", desc: "Seguimos el progreso en cada meta, cada sesión. Recibe informes regulares para que siempre sepa cómo van las cosas." },
+              { step: "05", title: "Participación Familiar", desc: "Le entrenamos y apoyamos en las mismas estrategias que usan nuestros terapeutas para que pueda reforzar habilidades entre sesiones en casa." },
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-3xl p-7 shadow-sm border border-blue-light/20 card-hover">
+                <div className="w-10 h-10 bg-blue/10 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-sm font-bold text-blue">{item.step}</span>
+                </div>
+                <h3 className="text-sm font-bold text-dark mb-3">{item.title}</h3>
+                <p className="text-gray text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SERVICIOS */}
       <section className="py-20 bg-gradient-to-b from-warm-white to-blue-lightest/30">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -222,17 +292,68 @@ export default function PaginaInicio() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicios.map((servicio, i) => (
-              <div key={i} className="bg-white rounded-3xl p-8 shadow-sm border border-blue-light/20 card-hover">
-                <h3 className="text-xl font-bold text-dark mb-3">{servicio.title}</h3>
-                <p className="text-gray text-sm leading-relaxed mb-5">{servicio.description}</p>
-                <Link href="/es/servicios" className="text-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
-                  Más Información
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </Link>
+              <div key={i} className="bg-white rounded-3xl shadow-sm border border-blue-light/20 card-hover group overflow-hidden">
+                <div className="h-48 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={servicio.img}
+                    alt={`${servicio.title} - servicio de terapia ABA en Kendall, FL`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-7">
+                  <h3 className="text-xl font-bold text-dark mb-3">{servicio.title}</h3>
+                  <p className="text-gray text-sm leading-relaxed mb-5">{servicio.description}</p>
+                  <Link href={`/es/servicios#${servicio.id}`} className="text-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                    Más Información
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* A QUIÉN AYUDAMOS */}
+      <section className="py-20 bg-warm-white relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-orange font-semibold text-sm uppercase tracking-wider">A Quién Ayudamos</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mt-3 mb-6">
+                ¿Es la Terapia ABA Adecuada para Su Hijo?
+              </h2>
+              <p className="text-gray leading-relaxed mb-6">
+                Build-A-Block Therapy trabaja con niños desde los 14 meses hasta la adolescencia
+                que han sido diagnosticados o están siendo evaluados por autismo y desafíos de desarrollo relacionados.
+                Si no está seguro de si su hijo califica, llámenos para una consulta gratuita — le ayudaremos a descubrirlo.
+              </p>
+              <Link href="/es/contacto" className="btn-primary">
+                Consulta Gratuita
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { title: "Trastorno del Espectro Autista", desc: "Terapia individualizada abordando comunicación, habilidades sociales y comportamiento." },
+                { title: "Retrasos del Habla y Lenguaje", desc: "Construyendo comunicación funcional a través de técnicas ABA basadas en evidencia." },
+                { title: "Dificultades Sociales", desc: "Enseñando amistad, empatía, turnos y regulación emocional." },
+                { title: "Comportamientos Desafiantes", desc: "Reemplazando agresión, autolesión o fuga con alternativas positivas." },
+                { title: "Habilidades de Vida Diaria", desc: "Construyendo independencia en vestirse, comer, ir al baño y rutinas." },
+                { title: "Preparación Escolar", desc: "Preparando a los niños para tener éxito en el aula con habilidades de atención y enfoque." },
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-2xl p-5 shadow-sm border border-blue-light/20">
+                  <h3 className="font-bold text-dark text-sm mb-2">{item.title}</h3>
+                  <p className="text-gray text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -248,7 +369,7 @@ export default function PaginaInicio() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonios.map((t, i) => (
-              <div key={i} className="bg-white rounded-3xl p-8 shadow-sm border border-blue-light/20 card-hover relative">
+              <div key={i} className="bg-white rounded-3xl p-8 shadow-sm border border-blue-light/20 card-hover relative flex flex-col">
                 <div className="absolute top-6 right-8 text-6xl text-blue/10 font-serif leading-none">&ldquo;</div>
                 <div className="flex gap-1 mb-4">
                   {[...Array(t.stars)].map((_, j) => (
@@ -257,9 +378,11 @@ export default function PaginaInicio() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray text-sm leading-relaxed mb-6 relative z-10">&ldquo;{t.quote}&rdquo;</p>
-                <p className="font-bold text-dark">{t.name}</p>
-                <p className="text-sm text-blue">{t.role}</p>
+                <p className="text-gray text-sm leading-relaxed relative z-10 flex-1">&ldquo;{t.quote}&rdquo;</p>
+                <div className="mt-6">
+                  <p className="font-bold text-dark">{t.name}</p>
+                  <p className="text-sm text-blue">{t.role}</p>
+                </div>
               </div>
             ))}
           </div>
