@@ -41,15 +41,27 @@ export default function PayInvoicePage() {
               <span className="text-sm text-blue font-semibold">Secure payment — powered by CollectCheckout</span>
             </div>
 
-            {/* Embed area */}
-            <div className="p-4 sm:p-8 md:p-12">
-              <div className="min-h-[600px] md:min-h-[500px] bg-blue-lightest/50 rounded-2xl border-2 border-dashed border-blue-light/40 relative overflow-hidden">
-                <iframe
-                  src="https://collectcheckout.com/collect-checkout/fields?cartId=4a2b283a-9371-44e7-88db-c2115474e610"
-                  title="Pay Invoice — Build-A-Block Therapy"
-                  className="absolute inset-0 w-full h-full border-0 rounded-2xl"
-                  allow="payment"
-                />
+            {/* Payment link */}
+            <div className="p-8 md:p-12 text-center">
+              <div className="bg-blue-lightest/50 rounded-2xl p-10 md:p-14">
+                <svg className="w-16 h-16 text-blue mx-auto mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                </svg>
+                <h3 className="text-2xl font-bold text-dark mb-3">Ready to Pay Your Invoice?</h3>
+                <p className="text-gray mb-8 max-w-md mx-auto">
+                  Click the button below to open our secure payment portal. You&apos;ll receive an email receipt immediately after payment.
+                </p>
+                <a
+                  href="https://collectcheckout.com/collect-checkout/fields?cartId=4a2b283a-9371-44e7-88db-c2115474e610"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary text-lg !py-4 !px-10"
+                >
+                  Pay Now — Secure Portal
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </a>
               </div>
             </div>
 
