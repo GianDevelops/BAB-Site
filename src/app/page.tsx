@@ -418,7 +418,7 @@ export default function Home() {
       </section>
 
       {/* ===== INSURANCE ===== */}
-      <section className="py-20 bg-gradient-to-b from-warm-white to-cream relative">
+      <section id="insurance" className="py-20 bg-gradient-to-b from-warm-white to-cream relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-orange font-semibold text-sm uppercase tracking-wider">Insurance Accepted</span>
