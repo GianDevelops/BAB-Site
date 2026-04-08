@@ -22,7 +22,14 @@ export default function ContactoPage() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
-      if (res.ok) { setStatus("success"); form.reset(); } else { setStatus("error"); }
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", "conversion", { send_to: "AW-18074058844/form_submit", event_category: "lead", event_label: "contacto_es_form" });
+          window.gtag("event", "generate_lead", { event_category: "form", event_label: "contacto_es_form" });
+        }
+      } else { setStatus("error"); }
     } catch { setStatus("error"); }
   };
 
