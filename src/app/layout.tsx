@@ -76,6 +76,18 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        {/* Google Ads tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18074058844" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18074058844');
+            `,
+          }}
+        />
         <link rel="alternate" hrefLang="en" href="https://buildablocktherapy.com" />
         <link rel="alternate" hrefLang="es" href="https://buildablocktherapy.com/es" />
         <link rel="alternate" hrefLang="x-default" href="https://buildablocktherapy.com" />
