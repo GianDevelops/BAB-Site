@@ -23,10 +23,10 @@ const services = [
 const insuranceProviders = [
   { name: "Cigna", logo: "/images/insurance/cigna.png" },
   { name: "Aetna", logo: "/images/insurance/aetna.png" },
-  { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
+  { name: "Florida Blue", logo: "/images/insurance/floridablue.png" },
   { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
   { name: "AvMed", logo: "/images/insurance/avmed.png" },
-  { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
+  { name: "Oscar Health", logo: "/images/insurance/oscar.png" },
   { name: "Humana", logo: "/images/insurance/humana.png" },
   { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
   { name: "Florida VPK", logo: "/images/insurance/vpk.png" },
@@ -41,7 +41,7 @@ export default function AreaPage({ city, slug, intro, description, nearby, mapQu
     },
     {
       q: `What insurance do you accept for ABA therapy in ${city}?`,
-      a: `We accept most major insurance plans including Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, TRICARE, AvMed, Magellan Health, Florida VPK, and Step Up for Students. Our team handles insurance verification for ${city} families to make the process easy.`,
+      a: `We accept most major insurance plans including Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, Oscar Health, AvMed, Florida Blue, Florida VPK, and Step Up for Students. Our team handles insurance verification for ${city} families to make the process easy.`,
     },
     {
       q: `How do I get started with ABA therapy in ${city}?`,

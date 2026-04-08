@@ -4,17 +4,17 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Insurance Accepted for ABA Therapy in Kendall & Miami",
   description:
-    "Build-A-Block Therapy accepts Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, TRICARE, AvMed, Magellan Health, Florida VPK, and Step Up for Students for ABA therapy in Miami-Dade County.",
+    "Build-A-Block Therapy accepts Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, Oscar Health, AvMed, Florida Blue, Florida VPK, and Step Up for Students for ABA therapy in Miami-Dade County.",
   robots: { index: false, follow: true },
 };
 
 const insuranceProviders = [
   { name: "Cigna", logo: "/images/insurance/cigna.png" },
   { name: "Aetna", logo: "/images/insurance/aetna.png" },
-  { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
+  { name: "Florida Blue", logo: "/images/insurance/floridablue.png" },
   { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
   { name: "AvMed", logo: "/images/insurance/avmed.png" },
-  { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
+  { name: "Oscar Health", logo: "/images/insurance/oscar.png" },
   { name: "Humana", logo: "/images/insurance/humana.png" },
   { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
   { name: "Florida VPK", logo: "/images/insurance/vpk.png" },

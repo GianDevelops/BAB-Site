@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const insuranceOptions = [
-  "Cigna", "Aetna", "Magellan Health", "Anthem BCBS", "AvMed",
-  "TRICARE", "Humana", "United Healthcare", "Florida VPK",
+  "Cigna", "Aetna", "Florida Blue", "Anthem BCBS", "AvMed",
+  "Oscar Health", "Humana", "United Healthcare", "Florida VPK",
   "Step Up for Students",
 ];
 

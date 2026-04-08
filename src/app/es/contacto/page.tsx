@@ -3,8 +3,8 @@
 import { useState, FormEvent } from "react";
 
 const opcionesSeguros = [
-  "Cigna", "Aetna", "Magellan Health", "Anthem BCBS", "AvMed",
-  "TRICARE", "Humana", "United Healthcare", "Florida VPK",
+  "Cigna", "Aetna", "Florida Blue", "Anthem BCBS", "AvMed",
+  "Oscar Health", "Humana", "United Healthcare", "Florida VPK",
   "Step Up for Students", "Otro", "Sin Seguro / Pago Privado",
 ];
 

@@ -8,14 +8,14 @@ const insuranceLogos = [
   { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
   { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
   { name: "Humana", logo: "/images/insurance/humana.png" },
-  { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
+  { name: "Oscar Health", logo: "/images/insurance/oscar.png" },
   { name: "AvMed", logo: "/images/insurance/avmed.png" },
-  { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
+  { name: "Florida Blue", logo: "/images/insurance/floridablue.png" },
 ];
 
 const insuranceOptions = [
-  "Cigna", "Aetna", "Magellan Health", "Anthem BCBS", "AvMed",
-  "TRICARE", "Humana", "United Healthcare", "Florida VPK",
+  "Cigna", "Aetna", "Florida Blue", "Anthem BCBS", "AvMed",
+  "Oscar Health", "Humana", "United Healthcare", "Florida VPK",
   "Step Up for Students", "Other", "No Insurance / Self-Pay",
 ];
 

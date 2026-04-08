@@ -102,7 +102,7 @@ export default function BlogPost() {
                 </p>
                 <p className="text-gray leading-relaxed">
                   Common insurance plans that cover ABA therapy in Miami include Cigna, Aetna, Anthem Blue Cross Blue Shield,
-                  United Healthcare, Humana, TRICARE, AvMed, and Magellan Health.
+                  United Healthcare, Humana, Oscar Health, AvMed, and Florida Blue.
                 </p>
               </div>
 

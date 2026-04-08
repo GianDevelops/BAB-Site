@@ -43,10 +43,10 @@ const services = [
 const insuranceProviders = [
   { name: "Cigna", logo: "/images/insurance/cigna.png" },
   { name: "Aetna", logo: "/images/insurance/aetna.png" },
-  { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
+  { name: "Florida Blue", logo: "/images/insurance/floridablue.png" },
   { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
   { name: "AvMed", logo: "/images/insurance/avmed.png" },
-  { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
+  { name: "Oscar Health", logo: "/images/insurance/oscar.png" },
   { name: "Humana", logo: "/images/insurance/humana.png" },
   { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
   { name: "Florida VPK", logo: "/images/insurance/vpk.png" },
@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover ABA therapy in Florida?",
-    a: "Yes! Florida law mandates that most insurance plans cover ABA therapy for children diagnosed with autism. We accept Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, TRICARE, AvMed, Magellan Health, Florida VPK, and Step Up for Students. Our team handles insurance verification to make the process easy for you.",
+    a: "Yes! Florida law mandates that most insurance plans cover ABA therapy for children diagnosed with autism. We accept Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, Oscar Health, AvMed, Florida Blue, Florida VPK, and Step Up for Students. Our team handles insurance verification to make the process easy for you.",
   },
   {
     q: "What areas in Miami do you serve?",
@@ -449,7 +449,7 @@ export default function Home() {
           {/* Crawlable text for SEO — visually hidden but readable by search engines */}
           <p className="sr-only">
             Build-A-Block Children Therapy Solutions accepts the following insurance providers for ABA therapy in Miami:
-            Cigna, Aetna, Magellan Health, Anthem Blue Cross Blue Shield, AvMed, TRICARE, Humana,
+            Cigna, Aetna, Florida Blue, Anthem Blue Cross Blue Shield, AvMed, Oscar Health, Humana,
             United Healthcare, Florida VPK, and Step Up for Students.
           </p>
 

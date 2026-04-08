@@ -44,10 +44,10 @@ const servicios = [
 const seguros = [
   { name: "Cigna", logo: "/images/insurance/cigna.png" },
   { name: "Aetna", logo: "/images/insurance/aetna.png" },
-  { name: "Magellan Health", logo: "/images/insurance/magellan.png" },
+  { name: "Florida Blue", logo: "/images/insurance/floridablue.png" },
   { name: "Anthem BCBS", logo: "/images/insurance/anthem.png" },
   { name: "AvMed", logo: "/images/insurance/avmed.png" },
-  { name: "TRICARE", logo: "/images/insurance/tricare.svg" },
+  { name: "Oscar Health", logo: "/images/insurance/oscar.png" },
   { name: "Humana", logo: "/images/insurance/humana.png" },
   { name: "United Healthcare", logo: "/images/insurance/uhc.png" },
   { name: "Florida VPK", logo: "/images/insurance/vpk.png" },
@@ -86,7 +86,7 @@ const preguntas = [
   },
   {
     q: "¿El seguro cubre la terapia ABA en Florida?",
-    a: "¡Sí! La ley de Florida exige que la mayoría de los planes de seguro cubran la terapia ABA para niños diagnosticados con autismo. Aceptamos Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, TRICARE, AvMed, Magellan Health, Florida VPK y Step Up for Students. Nuestro equipo se encarga de la verificación del seguro para facilitar el proceso.",
+    a: "¡Sí! La ley de Florida exige que la mayoría de los planes de seguro cubran la terapia ABA para niños diagnosticados con autismo. Aceptamos Cigna, Aetna, Anthem BCBS, United Healthcare, Humana, Oscar Health, AvMed, Florida Blue, Florida VPK y Step Up for Students. Nuestro equipo se encarga de la verificación del seguro para facilitar el proceso.",
   },
   {
     q: "¿Qué áreas de Miami atienden?",

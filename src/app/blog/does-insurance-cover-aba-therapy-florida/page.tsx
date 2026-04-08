@@ -87,7 +87,7 @@ export default function BlogPost() {
                 <h2 className="text-2xl font-bold text-dark mb-4">Which Insurance Plans Cover ABA in Miami?</h2>
                 <p className="text-gray leading-relaxed mb-4">
                   Most major insurance providers in Florida cover ABA therapy. At Build-A-Block Therapy, we work with
-                  Cigna, Aetna, Magellan Health, Anthem Blue Cross Blue Shield, AvMed, TRICARE, Humana, United Healthcare,
+                  Cigna, Aetna, Florida Blue, Anthem Blue Cross Blue Shield, AvMed, Oscar Health, Humana, United Healthcare,
                   Florida VPK, and Step Up for Students.
                 </p>
                 <p className="text-gray leading-relaxed">

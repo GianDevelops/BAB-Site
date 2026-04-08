@@ -167,10 +167,10 @@ export default function RootLayout({
               insuranceAccepted: [
                 "Cigna",
                 "Aetna",
-                "Magellan Health",
+                "Florida Blue",
                 "Anthem Blue Cross Blue Shield",
                 "AvMed",
-                "TRICARE",
+                "Oscar Health",
                 "Humana",
                 "United Healthcare",
                 "Florida VPK",
