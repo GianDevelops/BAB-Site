@@ -207,6 +207,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== OUR SPACE ===== */}
+      <section className="py-20 bg-gradient-to-b from-warm-white to-cream">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left — text */}
+            <div>
+              <span className="text-orange font-semibold text-sm uppercase tracking-wider">Visit Our Clinic</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mt-3 mb-5">
+                A Warm, Safe Space for Your Child
+              </h2>
+              <p className="text-gray leading-relaxed mb-6">
+                Our Kendall clinic was designed with your child in mind. Bright colors, organized play areas,
+                and a welcoming atmosphere where children feel comfortable from the moment they walk in.
+              </p>
+              <div className="flex items-start gap-3 text-sm text-gray">
+                <svg className="w-5 h-5 text-orange mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <span>7990 SW 117th Ave, Suite 134, Kendall, FL 33183</span>
+              </div>
+            </div>
+
+            {/* Right — photos */}
+            <div className="grid grid-cols-3 gap-3 items-end max-w-md lg:max-w-none lg:scale-110 origin-center">
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-lg -rotate-2 hover:rotate-0 transition-transform duration-500 ring-4 ring-white">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/bab-lobby.png" alt="Build-A-Block Therapy lobby in Kendall, FL" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-xl -translate-y-3 ring-4 ring-white z-10 hover:scale-105 transition-transform duration-500">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/bab-front-desk.png" alt="Build-A-Block Therapy front desk in Kendall, FL" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-lg rotate-2 hover:rotate-0 transition-transform duration-500 ring-4 ring-white">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/therapy-room.jpg" alt="Build-A-Block ABA therapy room in Kendall, FL" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== WHY CHOOSE US ===== */}
       <section className="py-20 bg-warm-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +266,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: "100% Individualized", desc: "No cookie-cutter programs here. Every treatment plan is designed specifically for your child's unique strengths and needs." },
-              { title: "In Your Home", desc: "We come to you. Your child learns in the environment where they feel most comfortable, their own home." },
+              { title: "Flexible Settings", desc: "We offer therapy in our Kendall clinic, in your home, at school, or via telehealth — wherever your child learns best." },
               { title: "Bilingual Team", desc: "Fluent in English and Spanish. We ensure nothing is lost in translation when it comes to your child's care." },
               { title: "Family First", desc: "We don't just work with your child — we empower your entire family with the tools to support their growth." },
             ].map((item, i) => (
