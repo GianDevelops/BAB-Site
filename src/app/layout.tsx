@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import LayoutShell from "@/components/LayoutShell";
 
@@ -77,7 +76,7 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        {/* Google Analytics 4 + Google Ads tag */}
+        {/* Google Analytics 4 + Google Ads tag injected via netlify.toml snippets */}
         <link rel="alternate" hrefLang="en" href="https://buildablocktherapy.com" />
         <link rel="alternate" hrefLang="es" href="https://buildablocktherapy.com/es" />
         <link rel="alternate" hrefLang="x-default" href="https://buildablocktherapy.com" />
@@ -177,19 +176,6 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <LayoutShell>{children}</LayoutShell>
       </body>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-E4R081ZJ5V"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-E4R081ZJ5V');
-          gtag('config', 'AW-18074058844');
-        `}
-      </Script>
     </html>
   );
 }
