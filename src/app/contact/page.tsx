@@ -28,7 +28,7 @@ export default function ContactPage() {
         setStatus("success");
         form.reset();
         if (typeof window !== "undefined" && typeof window.gtag === "function") {
-          window.gtag("event", "conversion", { send_to: "AW-18074058844/form_submit", event_category: "lead", event_label: "contact_form" });
+          window.gtag("event", "conversion", { send_to: "AW-18074058844/TEv8CMe_spscENyAsapD", event_category: "lead", event_label: "contact_form" });
           window.gtag("event", "generate_lead", { event_category: "form", event_label: "contact_form" });
         }
       } else {
