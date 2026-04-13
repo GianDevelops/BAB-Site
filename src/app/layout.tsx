@@ -77,14 +77,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         {/* Google Analytics 4 + Google Ads tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E4R081ZJ5V" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1GJ61GG1J" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-E4R081ZJ5V');
+              gtag('config', 'G-Q1GJ61GG1J');
               gtag('config', 'AW-18074058844');
             `,
           }}
