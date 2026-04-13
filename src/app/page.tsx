@@ -127,7 +127,7 @@ export default function Home() {
               </h1>
               <p className="text-lg sm:text-xl text-gray leading-relaxed mb-8 max-w-xl">
                 Compassionate, individualized ABA therapy that helps children with autism thrive —
-                in your home, on your schedule, with a team that treats your family like our own.
+                in our clinic or your home, on your schedule, with a team that treats your family like our own.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Link href="/contact" className="btn-primary text-lg">
